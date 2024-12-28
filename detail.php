@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,20 @@
     <link rel="stylesheet" href="css/detail.css">
     <title>Detail Produk</title>
 </head>
+
 <body>
     <!-- Navbar -->
-    <div class="top-navbar">   <!-- Navbar 1-->
+    <div class="top-navbar">
+        <!-- Navbar 1-->
         <div class="nav-links">
             <a href="#">Produk</a>
             <a href="#">Promo</a>
             <a href="#">Tentang Kami</a>
         </div>
     </div>
-    <nav class="main-navbar">  <!-- Navbar 2-->
-        <a href="#" class="logo">Bekas.<span style="color: #fcbf49;" >Id</span></a>
+    <nav class="main-navbar">
+        <!-- Navbar 2-->
+        <a href="#" class="logo">Bekas.<span style="color: #fcbf49;">Id</span></a>
 
         <div class="search-bar">
             <input type="text" placeholder="Cari produk" id="searchInput">
@@ -46,7 +50,7 @@
             </div>
             <h3>Keterangan</h3>
             <p class="produk-keterangan">
-                Kami menyarankan para pengguna yang membeli item berharga mahal untuk 
+                Kami menyarankan para pengguna yang membeli item berharga mahal untuk
                 bertemu langsung dan melakukan pembelian di tempat yang aman (COD). - Admin Bekas.Id
             </p>
             <div class="order-section">
@@ -63,8 +67,8 @@
         <h3>Deskripsi Produk</h3>
         <h3>Samsung Galaxy A80</h3>
         <p>
-            Nikmati pengalaman smartphone premium dengan Samsung Galaxy A80, yang menghadirkan 
-            inovasi desain dan performa terbaik. Smartphone ini cocok untuk Anda yang mencari 
+            Nikmati pengalaman smartphone premium dengan Samsung Galaxy A80, yang menghadirkan
+            inovasi desain dan performa terbaik. Smartphone ini cocok untuk Anda yang mencari
             keseimbangan antara gaya dan fungsi.
         </p>
         <h3>Kondisi Produk :</h3>
@@ -106,9 +110,9 @@
     <footer>
         <div class="footer-container">
             <div class="footer-left">
-                <h3>Bekas.<span style="color: #fcbf49;" >Id</span></h3>
-                <p>Menyediakan barang-barang bekas berkualitas dengan harga terbaik. 
-                   Temukan pilihan produk sesuai kebutuhan Anda.
+                <h3>Bekas.<span style="color: #fcbf49;">Id</span></h3>
+                <p>Menyediakan barang-barang bekas berkualitas dengan harga terbaik.
+                    Temukan pilihan produk sesuai kebutuhan Anda.
                 </p>
             </div>
             <div class="footer-center">
@@ -138,4 +142,5 @@
 
 
 </body>
+
 </html>
