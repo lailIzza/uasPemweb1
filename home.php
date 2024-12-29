@@ -39,71 +39,35 @@
         <div class="hero-slide">
             <div class="owl-carousel carousel-nav-center" id="hero-carousel">
                 <div class="hero-slide-item">
-                    <img src="./gambar/images/f1.jpg">
+                    <img src="./gambar/home/f1.jpg">
                     <div class="hero-slide-item-content">
                         <div class="item-content-wraper">
                             <div class="item-content-title top-down">
-                                Wanda Vision
-                            </div>
-                            <div class="movie-infos top-down delay-2">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.0</span>
-                                </div>
-                                <div class="movie-info">
-                                    <i class="bx bxs-time"></i>
-                                    <span>120 mins</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>HD</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>17+</span>
-                                </div>
+                                Tetap Keren, Tetap Hemat!
                             </div>
                             <div class="item-content-description top-down delay-4">
-                                Di tengah kesedihan dan trauma kehilangan orang tercinta, Wanda Maximoff menciptakan
-                                dunia sempurna dalam bayangannya. Namun, seiring berjalannya waktu, retakan mulai muncul
-                                dalam kenyataan yang ia bentuk. Kehidupan indah yang tampak sempurna ternyata
-                                menyembunyikan misteri gelap dan kebenaran yang menghantui.
-
-                                Siapakah Wanda sebenarnya, dan sejauh mana kekuatannya mampu mengubah realitas? Saksikan
-                                perjalanan emosional penuh aksi dan kejutan yang akan membuat Anda takjub, hanya di
-                                Wanda Vision.
+                                Pilihan terbaik untuk gaya maksimal dengan harga minimal. Jangan sampai ketinggalan,
+                                promo terbatas hanya untuk Anda!
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="hero-slide-item">
-                    <img src="./gambar/images/f2.jpg" alt="">
+                    <img src="./gambar/home/f2.jpg" alt="">
                     <div class="hero-slide-item-content">
                         <div class="item-content-wraper">
                             <div class="item-content-title top-down">
                                 Wanda Vision
                             </div>
-                            <div class="movie-infos top-down delay-2">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.0</span>
-                                </div>
-                                <div class="movie-info">
-                                    <i class="bx bxs-time"></i>
-                                    <span>120 mins</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>HD</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>17+</span>
-                                </div>
-                            </div>
                             <div class="item-content-description top-down delay-4">
                                 Di tengah kesedihan dan trauma kehilangan orang tercinta, Wanda Maximoff menciptakan
-                                dunia sempurna dalam bayangannya. Namun, seiring berjalannya waktu, retakan mulai muncul
+                                dunia sempurna dalam bayangannya. Namun, seiring berjalannya waktu, retakan mulai
+                                muncul
                                 dalam kenyataan yang ia bentuk. Kehidupan indah yang tampak sempurna ternyata
                                 menyembunyikan misteri gelap dan kebenaran yang menghantui.
 
-                                Siapakah Wanda sebenarnya, dan sejauh mana kekuatannya mampu mengubah realitas? Saksikan
+                                Siapakah Wanda sebenarnya, dan sejauh mana kekuatannya mampu mengubah realitas?
+                                Saksikan
                                 perjalanan emosional penuh aksi dan kejutan yang akan membuat Anda takjub, hanya di
                                 Wanda Vision.
                             </div>
@@ -114,35 +78,21 @@
                     </div>
                 </div>
                 <div class="hero-slide-item">
-                    <img src="./gambar/images/f3.jpg" alt="">
+                    <img src="./gambar/home/f3.jpg" alt="">
                     <div class="hero-slide-item-content">
                         <div class="item-content-wraper">
                             <div class="item-content-title top-down">
                                 Wanda Vision
                             </div>
-                            <div class="movie-infos top-down delay-2">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.0</span>
-                                </div>
-                                <div class="movie-info">
-                                    <i class="bx bxs-time"></i>
-                                    <span>120 mins</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>HD</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>17+</span>
-                                </div>
-                            </div>
                             <div class="item-content-description top-down delay-4">
                                 Di tengah kesedihan dan trauma kehilangan orang tercinta, Wanda Maximoff menciptakan
-                                dunia sempurna dalam bayangannya. Namun, seiring berjalannya waktu, retakan mulai muncul
+                                dunia sempurna dalam bayangannya. Namun, seiring berjalannya waktu, retakan mulai
+                                muncul
                                 dalam kenyataan yang ia bentuk. Kehidupan indah yang tampak sempurna ternyata
                                 menyembunyikan misteri gelap dan kebenaran yang menghantui.
 
-                                Siapakah Wanda sebenarnya, dan sejauh mana kekuatannya mampu mengubah realitas? Saksikan
+                                Siapakah Wanda sebenarnya, dan sejauh mana kekuatannya mampu mengubah realitas?
+                                Saksikan
                                 perjalanan emosional penuh aksi dan kejutan yang akan membuat Anda takjub, hanya di
                                 Wanda Vision.
                             </div>
@@ -153,35 +103,21 @@
                     </div>
                 </div>
                 <div class="hero-slide-item">
-                    <img src="./gambar/images/f4.jpg" alt="">
+                    <img src="./gambar/home/f4.jpg" alt="">
                     <div class="hero-slide-item-content">
                         <div class="item-content-wraper">
                             <div class="item-content-title top-down">
                                 Wanda Vision
                             </div>
-                            <div class="movie-infos top-down delay-2">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.0</span>
-                                </div>
-                                <div class="movie-info">
-                                    <i class="bx bxs-time"></i>
-                                    <span>120 mins</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>HD</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>17+</span>
-                                </div>
-                            </div>
                             <div class="item-content-description top-down delay-4">
                                 Di tengah kesedihan dan trauma kehilangan orang tercinta, Wanda Maximoff menciptakan
-                                dunia sempurna dalam bayangannya. Namun, seiring berjalannya waktu, retakan mulai muncul
+                                dunia sempurna dalam bayangannya. Namun, seiring berjalannya waktu, retakan mulai
+                                muncul
                                 dalam kenyataan yang ia bentuk. Kehidupan indah yang tampak sempurna ternyata
                                 menyembunyikan misteri gelap dan kebenaran yang menghantui.
 
-                                Siapakah Wanda sebenarnya, dan sejauh mana kekuatannya mampu mengubah realitas? Saksikan
+                                Siapakah Wanda sebenarnya, dan sejauh mana kekuatannya mampu mengubah realitas?
+                                Saksikan
                                 perjalanan emosional penuh aksi dan kejutan yang akan membuat Anda takjub, hanya di
                                 Wanda Vision.
                             </div>
@@ -192,35 +128,21 @@
                     </div>
                 </div>
                 <div class="hero-slide-item">
-                    <img src="./gambar/images/f5.jpg" alt="">
+                    <img src="./gambar/home/f5.jpg" alt="">
                     <div class="hero-slide-item-content">
                         <div class="item-content-wraper">
                             <div class="item-content-title top-down">
                                 Wanda Vision
                             </div>
-                            <div class="movie-infos top-down delay-2">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.0</span>
-                                </div>
-                                <div class="movie-info">
-                                    <i class="bx bxs-time"></i>
-                                    <span>120 mins</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>HD</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>17+</span>
-                                </div>
-                            </div>
                             <div class="item-content-description top-down delay-4">
                                 Di tengah kesedihan dan trauma kehilangan orang tercinta, Wanda Maximoff menciptakan
-                                dunia sempurna dalam bayangannya. Namun, seiring berjalannya waktu, retakan mulai muncul
+                                dunia sempurna dalam bayangannya. Namun, seiring berjalannya waktu, retakan mulai
+                                muncul
                                 dalam kenyataan yang ia bentuk. Kehidupan indah yang tampak sempurna ternyata
                                 menyembunyikan misteri gelap dan kebenaran yang menghantui.
 
-                                Siapakah Wanda sebenarnya, dan sejauh mana kekuatannya mampu mengubah realitas? Saksikan
+                                Siapakah Wanda sebenarnya, dan sejauh mana kekuatannya mampu mengubah realitas?
+                                Saksikan
                                 perjalanan emosional penuh aksi dan kejutan yang akan membuat Anda takjub, hanya di
                                 Wanda Vision.
                             </div>
@@ -233,213 +155,9 @@
             </div>
         </div>
 
-        <div class="section">
-            <div class="container">
-                <div class="section-header">
-                    Rekomendasi Untukmu
-                </div>
-                <div class="movies-slide carousel-nav-center owl-carousel">
-                    <a href="#" class="movie-item">
-                        <img src="./gambar/images/foryu/fy1.jpg">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Shadow
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>4.5 | Sisa 4</span>
-                                </div>
-                                <div class="movie-info">
-                                    <i class="bx bxs-time"></i>
-                                    <span>120 mins</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>HD</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>17+</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="movie-item">
-                        <img src="./gambar/images/foryu/fy2.jpg">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Transformer
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
-                                </div>
-                                <div class="movie-info">
-                                    <i class="bx bxs-time"></i>
-                                    <span>120 mins</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>HD</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>17+</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="movie-item">
-                        <img src="./gambar/images/foryu/fy3.jpg">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Resident Evil
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
-                                </div>
-                                <div class="movie-info">
-                                    <i class="bx bxs-time"></i>
-                                    <span>120 mins</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>HD</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>17+</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="movie-item">
-                        <img src="./gambar/images/foryu/fy4.jpg">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Captain Marvel
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
-                                </div>
-                                <div class="movie-info">
-                                    <i class="bx bxs-time"></i>
-                                    <span>120 mins</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>HD</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>17+</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <div class="container">
-                <div class="movies-slide carousel-nav-center owl-carousel">
-                    <a href="#" class="movie-item">
-                        <img src="./gambar/images/foryu/fy5.jpg">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Shadow
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
-                                </div>
-                                <div class="movie-info">
-                                    <i class="bx bxs-time"></i>
-                                    <span>120 mins</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>HD</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>17+</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="movie-item">
-                        <img src="./gambar/images/foryu/fy6.jpg">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Transformer
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
-                                </div>
-                                <div class="movie-info">
-                                    <i class="bx bxs-time"></i>
-                                    <span>120 mins</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>HD</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>17+</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="movie-item">
-                        <img src="./gambar/images/foryu/fy7.jpg">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Resident Evil
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
-                                </div>
-                                <div class="movie-info">
-                                    <i class="bx bxs-time"></i>
-                                    <span>120 mins</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>HD</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>17+</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="movie-item">
-                        <img src="./gambar/images/foryu/fy8.jpg">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Captain Marvel
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
-                                </div>
-                                <div class="movie-info">
-                                    <i class="bx bxs-time"></i>
-                                    <span>120 mins</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>HD</span>
-                                </div>
-                                <div class="movie-info">
-                                    <span>17+</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+
+
+
 
         <footer>
             <div class="footer-container">
