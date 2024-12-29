@@ -70,6 +70,9 @@
     cursor: pointer;
 }
 
+
+
+
 body {
     font-family: "Cairo", sans-serif;
     background-color: #ffffff;
@@ -112,9 +115,9 @@ body {
 }
 
 .item-content-title {
-    font-size: 4rem;
-    line-height: 4rem;
-    font-weight: 900;
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 700;
 }
 
 .movie-infos {
@@ -145,9 +148,9 @@ body {
 }
 
 .item-content-description {
-    font-size: 1.15rem;
+    font-size: 1rem;
     margin-top: var(--space-top);
-    line-height: 1.5rem;
+    line-height: 1rem;
 }
 
 .carousel-nav-center .owl-nav .owl-prev {
