@@ -16,181 +16,364 @@
 </head>
 
 <body>
-    <div class="top-navbar">
-        <div class="nav-links">
-            <a href="#">Produk</a>
-            <a href="#">Promo</a>
-            <a href="#">Tentang Kami</a>
-        </div>
-    </div>
-    <nav class="main-navbar">
-        <a href="#" class="logo">Bekas.<span style="color: #fcbf49;">Id</span></a>
 
-        <div class="search-bar">
-            <input type="text" placeholder="Cari produk" id="searchInput">
-            <button onclick="performSearch()"><i class='bx bx-search'></i></button>
-        </div>
+    <?php include('navbar.php'); ?>
 
-        <i class='bx bx-user user-icon'></i>
-    </nav>
-
+    <!-- Iklan Slide -->
 
     <div class="hero-section">
         <div class="hero-slide">
             <div class="owl-carousel carousel-nav-center" id="hero-carousel">
                 <div class="hero-slide-item">
-                    <img src="./gambar/home/f1.jpg">
-                    <div class="hero-slide-item-content">
-                        <div class="item-content-wraper">
-                            <div class="item-content-title top-down">
-                                Tetap Keren, Tetap Hemat!
-                            </div>
-                            <div class="item-content-description top-down delay-4">
-                                Pilihan terbaik untuk gaya maksimal dengan harga minimal. Jangan sampai ketinggalan,
-                                promo terbatas hanya untuk Anda!
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-slide-item">
-                    <img src="./gambar/home/f2.jpg" alt="">
-                    <div class="hero-slide-item-content">
-                        <div class="item-content-wraper">
-                            <div class="item-content-title top-down">
-                                Wanda Vision
-                            </div>
-                            <div class="item-content-description top-down delay-4">
-                                Di tengah kesedihan dan trauma kehilangan orang tercinta, Wanda Maximoff menciptakan
-                                dunia sempurna dalam bayangannya. Namun, seiring berjalannya waktu, retakan mulai
-                                muncul
-                                dalam kenyataan yang ia bentuk. Kehidupan indah yang tampak sempurna ternyata
-                                menyembunyikan misteri gelap dan kebenaran yang menghantui.
-
-                                Siapakah Wanda sebenarnya, dan sejauh mana kekuatannya mampu mengubah realitas?
-                                Saksikan
-                                perjalanan emosional penuh aksi dan kejutan yang akan membuat Anda takjub, hanya di
-                                Wanda Vision.
-                            </div>
-                            <div class="item-action top-down delay-6">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <img src="./gambar/home/f1.jpg" alt="">
                 </div>
                 <div class="hero-slide-item">
                     <img src="./gambar/home/f3.jpg" alt="">
-                    <div class="hero-slide-item-content">
-                        <div class="item-content-wraper">
-                            <div class="item-content-title top-down">
-                                Wanda Vision
-                            </div>
-                            <div class="item-content-description top-down delay-4">
-                                Di tengah kesedihan dan trauma kehilangan orang tercinta, Wanda Maximoff menciptakan
-                                dunia sempurna dalam bayangannya. Namun, seiring berjalannya waktu, retakan mulai
-                                muncul
-                                dalam kenyataan yang ia bentuk. Kehidupan indah yang tampak sempurna ternyata
-                                menyembunyikan misteri gelap dan kebenaran yang menghantui.
-
-                                Siapakah Wanda sebenarnya, dan sejauh mana kekuatannya mampu mengubah realitas?
-                                Saksikan
-                                perjalanan emosional penuh aksi dan kejutan yang akan membuat Anda takjub, hanya di
-                                Wanda Vision.
-                            </div>
-                            <div class="item-action top-down delay-6">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="hero-slide-item">
                     <img src="./gambar/home/f4.jpg" alt="">
-                    <div class="hero-slide-item-content">
-                        <div class="item-content-wraper">
-                            <div class="item-content-title top-down">
-                                Wanda Vision
-                            </div>
-                            <div class="item-content-description top-down delay-4">
-                                Di tengah kesedihan dan trauma kehilangan orang tercinta, Wanda Maximoff menciptakan
-                                dunia sempurna dalam bayangannya. Namun, seiring berjalannya waktu, retakan mulai
-                                muncul
-                                dalam kenyataan yang ia bentuk. Kehidupan indah yang tampak sempurna ternyata
-                                menyembunyikan misteri gelap dan kebenaran yang menghantui.
-
-                                Siapakah Wanda sebenarnya, dan sejauh mana kekuatannya mampu mengubah realitas?
-                                Saksikan
-                                perjalanan emosional penuh aksi dan kejutan yang akan membuat Anda takjub, hanya di
-                                Wanda Vision.
-                            </div>
-                            <div class="item-action top-down delay-6">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="hero-slide-item">
                     <img src="./gambar/home/f5.jpg" alt="">
-                    <div class="hero-slide-item-content">
-                        <div class="item-content-wraper">
-                            <div class="item-content-title top-down">
-                                Wanda Vision
-                            </div>
-                            <div class="item-content-description top-down delay-4">
-                                Di tengah kesedihan dan trauma kehilangan orang tercinta, Wanda Maximoff menciptakan
-                                dunia sempurna dalam bayangannya. Namun, seiring berjalannya waktu, retakan mulai
-                                muncul
-                                dalam kenyataan yang ia bentuk. Kehidupan indah yang tampak sempurna ternyata
-                                menyembunyikan misteri gelap dan kebenaran yang menghantui.
+                </div>
+            </div>
+        </div>
+    </div>
 
-                                Siapakah Wanda sebenarnya, dan sejauh mana kekuatannya mampu mengubah realitas?
-                                Saksikan
-                                perjalanan emosional penuh aksi dan kejutan yang akan membuat Anda takjub, hanya di
-                                Wanda Vision.
-                            </div>
-                            <div class="item-action top-down delay-6">
-                                </a>
-                            </div>
-                        </div>
+    <!-- Kategori Pilihan -->
+
+    <div class="container">
+        <div class="category-section">
+            <h2>
+                Kategori Pilihan
+            </h2>
+            <div class="categories">
+                <div class="category active">
+                    <img alt="Sepatu" height="100"
+                        src="https://storage.googleapis.com/a1aa/image/ccLYZzdiZTLhGVUT2lRLxvW1ouHZl55hjnuOr6zoQBciGAAF.jpg"
+                        width="100" />
+                    <p>
+                        Sepatu
+                    </p>
+                </div>
+                <div class="category">
+                    <img alt="Pakaian" height="100"
+                        src="https://storage.googleapis.com/a1aa/image/IgerFjCq8sSdFKHYEO9MN4qQbAp0kHlyXxT6K0T1vNCANAAKA.jpg"
+                        width="100" />
+                    <p>
+                        Pakaian
+                    </p>
+                </div>
+                <div class="category">
+                    <img alt="Tas" height="100"
+                        src="https://storage.googleapis.com/a1aa/image/XtZZdq0ekvykKK4n2fzqj19ekj9Sf0uZwszKV9InNeXZQDAgC.jpg"
+                        width="100" />
+                    <p>
+                        Tas
+                    </p>
+                </div>
+                <div class="category">
+                    <img alt="Elektronik" height="100"
+                        src="https://storage.googleapis.com/a1aa/image/CfN4wzqYP1WHGqZVpaC2PCSQm6o0lM0RAeDtOT6zYUkHaAAUA.jpg"
+                        width="100" />
+                    <p>
+                        Elektronik
+                    </p>
+                </div>
+                <div class="category">
+                    <img alt="Aksesoris" height="100"
+                        src="https://storage.googleapis.com/a1aa/image/RdxfeyMge4anwJ646LbOQra6iW17j5tmJHpZXOtCM5VL0AAoA.jpg"
+                        width="100" />
+                    <p>
+                        Aksesoris
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rekomendasi -->
+
+        <div class="recommendation-section">
+            <h2>
+                Rekomendasi untukmu
+            </h2>
+            <div class="recommendations">
+                <div class="product-card">
+                    <img alt="Product Image" height="150" src="gambar/hp2.jpg" width="150" />
+                    <div class="product-info">
+                        <h3>
+                            Ellipsesinc - Kaos Oversize Pria Wanita
+                        </h3>
+                        <p class="price">
+                            Rp. 120.000
+                        </p>
+                        <p class="rating">
+                            <i class="fas fa-star">
+                            </i>
+                            4.9 | Sisa 2
+                        </p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy2.jpg" width="150" />
+                    <div class="product-info">
+                        <h3>
+                            Ellipsesinc - Kaos Oversize Pria Wanita
+                        </h3>
+                        <p class="price">
+                            Rp. 120.000
+                        </p>
+                        <p class="rating">
+                            <i class="fas fa-star">
+                            </i>
+                            4.9 | Sisa 2
+                        </p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy3.jpg" width="150" />
+                    <div class="product-info">
+                        <h3>
+                            Ellipsesinc - Kaos Oversize Pria Wanita
+                        </h3>
+                        <p class="price">
+                            Rp. 120.000
+                        </p>
+                        <p class="rating">
+                            <i class="fas fa-star">
+                            </i>
+                            4.9 | Sisa 2
+                        </p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy4.jpg" width="150" />
+                    <div class="product-info">
+                        <h3>
+                            Ellipsesinc - Kaos Oversize Pria Wanita
+                        </h3>
+                        <p class="price">
+                            Rp. 120.000
+                        </p>
+                        <p class="rating">
+                            <i class="fas fa-star">
+                            </i>
+                            4.9 | Sisa 2
+                        </p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy5.jpg" width="150" />
+                    <div class="product-info">
+                        <h3>
+                            Ellipsesinc - Kaos Oversize Pria Wanita
+                        </h3>
+                        <p class="price">
+                            Rp. 120.000
+                        </p>
+                        <p class="rating">
+                            <i class="fas fa-star">
+                            </i>
+                            4.9 | Sisa 2
+                        </p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy6.jpg" width="150" />
+                    <div class="product-info">
+                        <h3>
+                            Ellipsesinc - Kaos Oversize Pria Wanita
+                        </h3>
+                        <p class="price">
+                            Rp. 120.000
+                        </p>
+                        <p class="rating">
+                            <i class="fas fa-star">
+                            </i>
+                            4.9 | Sisa 2
+                        </p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy7.jpg" width="150" />
+                    <div class="product-info">
+                        <h3>
+                            Ellipsesinc - Kaos Oversize Pria Wanita
+                        </h3>
+                        <p class="price">
+                            Rp. 120.000
+                        </p>
+                        <p class="rating">
+                            <i class="fas fa-star">
+                            </i>
+                            4.9 | Sisa 2
+                        </p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy8.jpg" width="150" />
+                    <div class="product-info">
+                        <h3>
+                            Ellipsesinc - Kaos Oversize Pria Wanita
+                        </h3>
+                        <p class="price">
+                            Rp. 120.000
+                        </p>
+                        <p class="rating">
+                            <i class="fas fa-star">
+                            </i>
+                            4.9 | Sisa 2
+                        </p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy9.jpg" width="150" />
+                    <div class="product-info">
+                        <h3>
+                            Ellipsesinc - Kaos Oversize Pria Wanita
+                        </h3>
+                        <p class="price">
+                            Rp. 120.000
+                        </p>
+                        <p class="rating">
+                            <i class="fas fa-star">
+                            </i>
+                            4.9 | Sisa 2
+                        </p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy10.jpg" width="150" />
+                    <div class="product-info">
+                        <h3>
+                            Ellipsesinc - Kaos Oversize Pria Wanita
+                        </h3>
+                        <p class="price">
+                            Rp. 120.000
+                        </p>
+                        <p class="rating">
+                            <i class="fas fa-star">
+                            </i>
+                            4.9 | Sisa 2
+                        </p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy11.jpg" width="150" />
+                    <div class="product-info">
+                        <h3>
+                            Ellipsesinc - Kaos Oversize Pria Wanita
+                        </h3>
+                        <p class="price">
+                            Rp. 120.000
+                        </p>
+                        <p class="rating">
+                            <i class="fas fa-star">
+                            </i>
+                            4.9 | Sisa 2
+                        </p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy12.jpg" width="150" />
+                    <div class="product-info">
+                        <h3>
+                            Ellipsesinc - Kaos Oversize Pria Wanita
+                        </h3>
+                        <p class="price">
+                            Rp. 120.000
+                        </p>
+                        <p class="rating">
+                            <i class="fas fa-star"></i> </i>
+                            4.9 | Sisa 2
+                        </p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy13.jpg" width="150" />
+                    <div class="product-info">
+                        <h3>
+                            Ellipsesinc - Kaos Oversize Pria Wanita
+                        </h3>
+                        <p class="price">
+                            Rp. 120.000
+                        </p>
+                        <p class="rating">
+                            <i class="fas fa-star"></i> </i>
+                            4.9 | Sisa 2
+                        </p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy14.jpg" width="150" />
+                    <div class="product-info">
+                        <h3>
+                            Ellipsesinc - Kaos Oversize Pria Wanita
+                        </h3>
+                        <p class="price">
+                            Rp. 120.000
+                        </p>
+                        <p class="rating">
+                            <i class="fas fa-star"></i> </i>
+                            4.9 | Sisa 2
+                        </p>
                     </div>
                 </div>
             </div>
+            <div class="load-more">
+                <button>Muat Lebih Banyak</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Opsi -->
+
+    <div class="container-opsi">
+        <div class="header">
+            <img src="gambar/woman.png" alt="A woman smiling and pointing to the text">
+            <div class="text">
+                <h2>Mengapa kita Harus Berbelanja di Bekas.id</h2>
+            </div>
+        </div>
+        <div class="features">
+            <div class="feature">
+                <i class='bx bxs-dollar-circle'></i>
+                <p>Harga yang Terjangkau</p>
+            </div>
+            <div class="feature">
+                <i class='bx bxs-truck'></i>
+                <p>Pengiriman ke Seluruh Indonesia</p>
+            </div>
+            <div class="feature">
+                <i class='bx bxs-store'></i>
+                <p>Telah bekerja dengan Mitra terpercaya</p>
+            </div>
+        </div>
+        <div class="section">
+            <h3>Tentang Bekas.id</h3>
+            <p>Bekas.id adalah platform inovatif yang memungkinkan pengguna untuk membeli dan menjual barang preloved
+                (barang bekas berkualitas). Dengan fokus pada keberlanjutan dan gaya hidup hemat, Bekas.id memberikan
+                solusi praktis bagi mereka yang ingin mendapatkan barang berkualitas dengan harga lebih terjangkau
+                sekaligus mendukung upaya pengurangan limbah. Platform ini dirancang agar mudah digunakan, menghubungkan
+                penjual dan pembeli secara langsung, serta menawarkan berbagai kategori produk mulai dari fashion,
+                elektronik, hingga perlengkapan rumah tangga. Bekas.id hadir sebagai bagian dari tren ekonomi sirkular,
+                membantu masyarakat mengubah barang tak terpakai menjadi peluang baru.</p>
+        </div>
+        <div class="section">
+            <h3>Mitra Kami</h3>
+            <p>Bekas.id berkomitmen untuk memberikan pengalaman terbaik bagi pengguna dengan menjalin kerja sama
+                strategis bersama mitra terpercaya. Melalui kolaborasi ini, kami memastikan bahwa setiap transaksi yang
+                terjadi di platform kami aman, nyaman, dan memenuhi standar kualitas yang tinggi. Mitra-mitra terpercaya
+                kami mencakup berbagai sektor, mulai dari penyedia layanan logistik untuk pengiriman cepat dan aman,
+                hingga mitra pembayaran yang memastikan transaksi berjalan lancar. Bersama mitra kami, Bekas.id terus
+                mendukung gaya hidup yang lebih berkelanjutan, sekaligus menciptakan ekosistem preloved yang lebih
+                profesional dan terpercaya. Mari bersama-sama mengubah barang bekas menjadi nilai baru!</p>
         </div>
 
 
 
 
-
-        <footer>
-            <div class="footer-container">
-                <div class="footer-left">
-                    <h3>Bekas.<span style="color: #fcbf49;">Id</span></h3>
-                    <p>Menyediakan barang-barang bekas berkualitas dengan harga terbaik.
-                        Temukan pilihan produk sesuai kebutuhan Anda.
-                    </p>
-                </div>
-                <div class="footer-center">
-                    <h4>Navigasi</h4>
-                    <ul>
-                        <li><a href="#">Tentang Kami</a></li>
-                        <li><a href="#">Kontak</a></li>
-                        <li><a href="#">Privasi</a></li>
-                        <li><a href="#">Syarat & Ketentuan</a></li>
-                    </ul>
-                </div>
-                <div class="footer-right">
-                    <h4>Ikuti Kami</h4>
-                    <div class="social-icons">
-                        <a href="#"><i class='bx bxl-facebook'></i></a>
-                        <a href="#"><i class='bx bxl-twitter'></i></a>
-                        <a href="#"><i class='bx bxl-instagram'></i></a>
-                        <a href="#"><i class='bx bxl-linkedin'></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-divider"></div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Bekas.Id. All rights reserved.</p>
-            </div>
-        </footer>
+        <?php include('footer.php'); ?>
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
