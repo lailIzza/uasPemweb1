@@ -103,7 +103,7 @@
             <button onclick="performSearch()"><i class='bx bx-search'></i></button>
         </div>
 
-        <i class='bx bx-user user-icon'></i>
+        <a href="admin/profil.php"><i class='bx bx-user user-icon'></i></a>
     </nav>
 </body>
 </html>
