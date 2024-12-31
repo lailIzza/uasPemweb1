@@ -1,0 +1,168 @@
+body {  
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.banner {
+    width: 80%; /* Mengatur lebar banner menjadi 80% dari kontainer */
+    margin: 20px auto; /* Margin atas dan bawah 20px, margin kiri dan kanan otomatis */
+    padding: 0; /* Menghapus padding untuk memastikan tidak ada ruang di dalam banner */
+}
+
+.banner img {
+    width: 100%; /* Memastikan gambar mengisi seluruh lebar banner */
+    height: 300px; /* Mempertahankan rasio aspek gambar */
+    border-radius: 8px; /* Menambahkan sudut melengkung pada gambar (opsional) */
+}
+
+.container {
+    display: flex; /* Menggunakan flexbox untuk menampilkan filter dan produk berdampingan */
+    padding: 20px;
+}
+
+.filter {
+    width: 20%; /* Filter occupies 20% of the container */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* Space between filter and products */
+}
+
+.products {
+    width: 80%; /* Products occupy 80% of the container */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-item {
+    width: calc(25% - 20px); /* Empat item per baris */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-item h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.product-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+.product-item .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-item .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-top: 10px;
+    background-color: #1a1a1a;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap; /* Memungkinkan produk untuk membungkus ke baris berikutnya */
+    gap: 20px; /* Jarak antara produk */
+}
+
+.product-item {
+    width: calc(25% - 20px); /* Empat item per baris */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+}
+
+
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .footer-links {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.footer .footer-links div {
+    width: 30%;
+}
+
+.footer .footer-links h4 {
+    margin-top: 0;
+}
+
+.footer .footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer .footer-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Menumpuk filter dan produk secara vertikal */
+    }
+    .filter, .products {
+        width: 100%; /* Lebar penuh untuk keduanya */
+    }
+    .product-item {
+        width: calc(50% - 20px); /* Dua item per baris */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        width: 100%; /* Satu item per baris */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-item {
+        width: calc(50% - 20px); /* Dua item per baris */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        width: 100%; /* Satu item per baris */
+    }
+}
