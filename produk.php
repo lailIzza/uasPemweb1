@@ -14,7 +14,7 @@
     <?php include('navbar.php'); ?>
 
     <div class="banner">
-        <img src="https://storage.googleapis.com/a1aa/image/jJZSq7NiEAqRPNjLgNO0YtESOIvWyFe0gNEZB2Gv1lM27ffnA.jpg" alt="Banner with discount offers and product images" width="1200" height="300"/>
+        <img src="gambar/home/f3.jpg" alt="Banner with discount offers and product images" width="1200" height="300"/>
     </div>
     <div class="container">
         <aside class="filter">
@@ -40,10 +40,9 @@
             <h2>Home/Produk</h2>
             <div class="product-grid">
                 <div class="product-item">
-                    <img src="https://storage.googleapis.com/a1aa/image/MBMn4NYfKc3tU65EqaMefWkIgfpGQ0FZEnQGoUfyLvzu9effTA.jpg" alt="Product image" width="200" height="200"/>
-                    <h3>Product Name</h3>
-                    <p>Short description of the product.</p>
-                    <div class="price">$20.00</div>
+                    <img src="gambar/Sepatu Cewek.jpg" alt="Product image" width="200" height="200"/>
+                    <h3>Sepatu Cewek</h3>
+                    <div class="price">80.00</div>
                     <a href="detail.php" class="btn">Lihat Produk</a>
                 </div>
                 <!-- Repeat the product-item div for each product -->
