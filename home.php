@@ -48,42 +48,32 @@
                 Kategori Pilihan
             </h2>
             <div class="categories">
-                <div class="category active">
-                    <img alt="Sepatu" height="100"
-                        src="https://storage.googleapis.com/a1aa/image/ccLYZzdiZTLhGVUT2lRLxvW1ouHZl55hjnuOr6zoQBciGAAF.jpg"
-                        width="100" />
+                <div class="category">
+                    <img alt="Sepatu" height="100" src="gambar/home/foryu/kp1.jpg" width="100" />
                     <p>
                         Sepatu
                     </p>
                 </div>
                 <div class="category">
-                    <img alt="Pakaian" height="100"
-                        src="https://storage.googleapis.com/a1aa/image/IgerFjCq8sSdFKHYEO9MN4qQbAp0kHlyXxT6K0T1vNCANAAKA.jpg"
-                        width="100" />
+                    <img alt="Pakaian" height="100" src="gambar/home/foryu/kp3.jpg" width="100" />
                     <p>
                         Pakaian
                     </p>
                 </div>
                 <div class="category">
-                    <img alt="Tas" height="100"
-                        src="https://storage.googleapis.com/a1aa/image/XtZZdq0ekvykKK4n2fzqj19ekj9Sf0uZwszKV9InNeXZQDAgC.jpg"
-                        width="100" />
+                    <img alt="Tas" height="100" src="gambar/home/foryu/kp2.jpg" width="100" />
                     <p>
                         Tas
                     </p>
                 </div>
                 <div class="category">
-                    <img alt="Elektronik" height="100"
-                        src="https://storage.googleapis.com/a1aa/image/CfN4wzqYP1WHGqZVpaC2PCSQm6o0lM0RAeDtOT6zYUkHaAAUA.jpg"
-                        width="100" />
+                    <img alt="Elektronik" height="100" src="gambar/home/foryu/kp4.jpg" width="100" />
                     <p>
                         Elektronik
                     </p>
                 </div>
                 <div class="category">
-                    <img alt="Aksesoris" height="100"
-                        src="https://storage.googleapis.com/a1aa/image/RdxfeyMge4anwJ646LbOQra6iW17j5tmJHpZXOtCM5VL0AAoA.jpg"
-                        width="100" />
+                    <img alt="Aksesoris" height="100" src="gambar/home/foryu/kp5.jpg" width="100" />
                     <p>
                         Aksesoris
                     </p>
@@ -102,15 +92,15 @@
                     <img alt="Product Image" height="150" src="gambar/hp2.jpg" width="150" />
                     <div class="product-info">
                         <h3>
-                            Ellipsesinc - Kaos Oversize Pria Wanita
+                            Realme C11 RAM 2+32
                         </h3>
                         <p class="price">
-                            Rp. 120.000
+                            Rp. 1.929.000
                         </p>
                         <p class="rating">
                             <i class="fas fa-star">
                             </i>
-                            4.9 | Sisa 2
+                            4.8 | Sisa 2
                         </p>
                     </div>
                 </div>
@@ -118,15 +108,15 @@
                     <img alt="Product Image" height="150" src="gambar/home/foryu/fy2.jpg" width="150" />
                     <div class="product-info">
                         <h3>
-                            Ellipsesinc - Kaos Oversize Pria Wanita
+                            Kamera Nikon D3300 KIT-18-MM
                         </h3>
                         <p class="price">
-                            Rp. 120.000
+                            Rp. 2.220.000
                         </p>
                         <p class="rating">
                             <i class="fas fa-star">
                             </i>
-                            4.9 | Sisa 2
+                            4.7 | Sisa 4
                         </p>
                     </div>
                 </div>
@@ -134,15 +124,15 @@
                     <img alt="Product Image" height="150" src="gambar/home/foryu/fy3.jpg" width="150" />
                     <div class="product-info">
                         <h3>
-                            Ellipsesinc - Kaos Oversize Pria Wanita
+                            Tas Selempang Eiger 1989
                         </h3>
                         <p class="price">
-                            Rp. 120.000
+                            Rp. 265.000
                         </p>
                         <p class="rating">
                             <i class="fas fa-star">
                             </i>
-                            4.9 | Sisa 2
+                            4.8 | Sisa 8
                         </p>
                     </div>
                 </div>
@@ -150,15 +140,15 @@
                     <img alt="Product Image" height="150" src="gambar/home/foryu/fy4.jpg" width="150" />
                     <div class="product-info">
                         <h3>
-                            Ellipsesinc - Kaos Oversize Pria Wanita
+                            Samsung A9 2018 6/128GB
                         </h3>
                         <p class="price">
-                            Rp. 120.000
+                            Rp. 2.123.000
                         </p>
                         <p class="rating">
                             <i class="fas fa-star">
                             </i>
-                            4.9 | Sisa 2
+                            4.7 | Sisa 1
                         </p>
                     </div>
                 </div>
@@ -166,15 +156,15 @@
                     <img alt="Product Image" height="150" src="gambar/home/foryu/fy5.jpg" width="150" />
                     <div class="product-info">
                         <h3>
-                            Ellipsesinc - Kaos Oversize Pria Wanita
+                            Speaker Polytron Pas 8F12 Bluetooth
                         </h3>
                         <p class="price">
-                            Rp. 120.000
+                            Rp. 970.200
                         </p>
                         <p class="rating">
                             <i class="fas fa-star">
                             </i>
-                            4.9 | Sisa 2
+                            4.9 | Sisa 5
                         </p>
                     </div>
                 </div>
@@ -182,15 +172,15 @@
                     <img alt="Product Image" height="150" src="gambar/home/foryu/fy6.jpg" width="150" />
                     <div class="product-info">
                         <h3>
-                            Ellipsesinc - Kaos Oversize Pria Wanita
+                            Jaket Arcteryx Shashka Waterproof
                         </h3>
                         <p class="price">
-                            Rp. 120.000
+                            Rp. 3.445.000
                         </p>
                         <p class="rating">
                             <i class="fas fa-star">
                             </i>
-                            4.9 | Sisa 2
+                            4.8 | Sisa 2
                         </p>
                     </div>
                 </div>
@@ -198,15 +188,15 @@
                     <img alt="Product Image" height="150" src="gambar/home/foryu/fy7.jpg" width="150" />
                     <div class="product-info">
                         <h3>
-                            Ellipsesinc - Kaos Oversize Pria Wanita
+                            Sepatu Nike Air
                         </h3>
                         <p class="price">
-                            Rp. 120.000
+                            Rp. 2.000.000
                         </p>
                         <p class="rating">
                             <i class="fas fa-star">
                             </i>
-                            4.9 | Sisa 2
+                            4.8 | Sisa 3
                         </p>
                     </div>
                 </div>
@@ -214,10 +204,10 @@
                     <img alt="Product Image" height="150" src="gambar/home/foryu/fy8.jpg" width="150" />
                     <div class="product-info">
                         <h3>
-                            Ellipsesinc - Kaos Oversize Pria Wanita
+                            Sepatu New Balance 574 X Stone Island
                         </h3>
                         <p class="price">
-                            Rp. 120.000
+                            Rp. 1.509.000
                         </p>
                         <p class="rating">
                             <i class="fas fa-star">
@@ -230,15 +220,15 @@
                     <img alt="Product Image" height="150" src="gambar/home/foryu/fy9.jpg" width="150" />
                     <div class="product-info">
                         <h3>
-                            Ellipsesinc - Kaos Oversize Pria Wanita
+                            Laptop Acer 12 Inch 11.6 d722
                         </h3>
                         <p class="price">
-                            Rp. 120.000
+                            Rp. 2.299.000
                         </p>
                         <p class="rating">
                             <i class="fas fa-star">
                             </i>
-                            4.9 | Sisa 2
+                            4.7 | Sisa 4
                         </p>
                     </div>
                 </div>
@@ -246,15 +236,15 @@
                     <img alt="Product Image" height="150" src="gambar/home/foryu/fy10.jpg" width="150" />
                     <div class="product-info">
                         <h3>
-                            Ellipsesinc - Kaos Oversize Pria Wanita
+                            Kamera Mirrorless Fujifilm xa7 x-a7
                         </h3>
                         <p class="price">
-                            Rp. 120.000
+                            Rp. 6.550.000
                         </p>
                         <p class="rating">
                             <i class="fas fa-star">
                             </i>
-                            4.9 | Sisa 2
+                            4.9 | Sisa 1
                         </p>
                     </div>
                 </div>
@@ -262,15 +252,15 @@
                     <img alt="Product Image" height="150" src="gambar/home/foryu/fy11.jpg" width="150" />
                     <div class="product-info">
                         <h3>
-                            Ellipsesinc - Kaos Oversize Pria Wanita
+                            Celana Tactical Panjang Outdoor
                         </h3>
                         <p class="price">
-                            Rp. 120.000
+                            Rp. 220.000
                         </p>
                         <p class="rating">
                             <i class="fas fa-star">
                             </i>
-                            4.9 | Sisa 2
+                            4.7 | Sisa 5
                         </p>
                     </div>
                 </div>
@@ -278,14 +268,14 @@
                     <img alt="Product Image" height="150" src="gambar/home/foryu/fy12.jpg" width="150" />
                     <div class="product-info">
                         <h3>
-                            Ellipsesinc - Kaos Oversize Pria Wanita
+                            Celana Pendek Eiger Mercury
                         </h3>
                         <p class="price">
-                            Rp. 120.000
+                            Rp. 130.000
                         </p>
                         <p class="rating">
                             <i class="fas fa-star"></i> </i>
-                            4.9 | Sisa 2
+                            4.8 | Sisa 2
                         </p>
                     </div>
                 </div>
@@ -293,14 +283,14 @@
                     <img alt="Product Image" height="150" src="gambar/home/foryu/fy13.jpg" width="150" />
                     <div class="product-info">
                         <h3>
-                            Ellipsesinc - Kaos Oversize Pria Wanita
+                            Tas Laptop Original HP 15.6 Inch
                         </h3>
                         <p class="price">
-                            Rp. 120.000
+                            Rp. 65.000
                         </p>
                         <p class="rating">
                             <i class="fas fa-star"></i> </i>
-                            4.9 | Sisa 2
+                            4.6 | Sisa 3
                         </p>
                     </div>
                 </div>
@@ -308,14 +298,14 @@
                     <img alt="Product Image" height="150" src="gambar/home/foryu/fy14.jpg" width="150" />
                     <div class="product-info">
                         <h3>
-                            Ellipsesinc - Kaos Oversize Pria Wanita
+                            TV Sharp Led 24 Inch - LC24LE170i
                         </h3>
                         <p class="price">
-                            Rp. 120.000
+                            Rp. 999.000
                         </p>
                         <p class="rating">
                             <i class="fas fa-star"></i> </i>
-                            4.9 | Sisa 2
+                            4.8 | Sisa 1
                         </p>
                     </div>
                 </div>
