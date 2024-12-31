@@ -17,31 +17,13 @@
 
 <body>
 
+    <!-- navbar -->
     <?php include('navbar.php'); ?>
 
-    <!-- Iklan Slide -->
-
-    <div class="hero-section">
-        <div class="hero-slide">
-            <div class="owl-carousel carousel-nav-center" id="hero-carousel">
-                <div class="hero-slide-item">
-                    <img src="./gambar/home/f1.jpg" alt="">
-                </div>
-                <div class="hero-slide-item">
-                    <img src="./gambar/home/f3.jpg" alt="">
-                </div>
-                <div class="hero-slide-item">
-                    <img src="./gambar/home/f4.jpg" alt="">
-                </div>
-                <div class="hero-slide-item">
-                    <img src="./gambar/home/f5.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- slide -->
+    <?php include('slide.php'); ?>
 
     <!-- Kategori Pilihan -->
-
     <div class="container">
         <div class="category-section">
             <h2>
@@ -80,9 +62,9 @@
                 </div>
             </div>
         </div>
+        <!-- END Kategori -->
 
         <!-- Rekomendasi -->
-
         <div class="recommendation-section">
             <h2>
                 Rekomendasi untukmu
@@ -315,9 +297,9 @@
             </div>
         </div>
     </div>
+    <!-- END Rekomendasi -->
 
     <!-- Opsi -->
-
     <div class="container-opsi">
         <div class="header">
             <img src="gambar/woman.png" alt="A woman smiling and pointing to the text">
@@ -327,15 +309,15 @@
         </div>
         <div class="features">
             <div class="feature">
-                <i class='bx bxs-dollar-circle'></i>
+                <i class='bx bxs-dollar-circle' style="font-size: 4rem;"></i>
                 <p>Harga yang Terjangkau</p>
             </div>
             <div class="feature">
-                <i class='bx bxs-truck'></i>
+                <i class='bx bxs-truck' style="font-size: 4rem;"></i>
                 <p>Pengiriman ke Seluruh Indonesia</p>
             </div>
             <div class="feature">
-                <i class='bx bxs-store'></i>
+                <i class='bx bxs-store' style="font-size: 4rem;"></i>
                 <p>Telah bekerja dengan Mitra terpercaya</p>
             </div>
         </div>
@@ -359,18 +341,11 @@
                 mendukung gaya hidup yang lebih berkelanjutan, sekaligus menciptakan ekosistem preloved yang lebih
                 profesional dan terpercaya. Mari bersama-sama mengubah barang bekas menjadi nilai baru!</p>
         </div>
+    </div>
+    <!-- END Opsi -->
 
-
-
-
-        <?php include('footer.php'); ?>
-
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-            integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="js/home.js"></script>
+    <!-- Footer -->
+    <?php include('footer.php'); ?>
 
 </body>
 
