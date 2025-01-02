@@ -30,6 +30,9 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-right: 20px; /* Space between filter and products */
 }
+.filter li{
+    text-decoration: none;
+}
 
 .products {
     width: 80%; /* Products occupy 80% of the container */
