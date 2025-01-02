@@ -1,6 +1,14 @@
 <?php
 require "../koneksi.php";
 
+// Query untuk mendapatkan daftar kategori dari database
+$sql_kategori = "SELECT * FROM kategori";
+$result_kategori = $conn->query($sql_kategori);
+
+if ($result_kategori === false) {
+    die("Error pada query kategori: " . $conn->error);
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Ambil data dari form
     $kategori_id = isset($_POST['kategori_id']) ? intval($_POST['kategori_id']) : null;
@@ -8,34 +16,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $deskripsi = htmlspecialchars($_POST['deskripsi']);
     $kondisi_produk = htmlspecialchars($_POST['kondisi_produk']);
     $bonus_produk = htmlspecialchars($_POST['bonus_produk']);
-    $harga = floatval($_POST['harga']);
-    $stock = intval($_POST['stock']);
+    $harga = isset($_POST['harga']) ? floatval($_POST['harga']) : 0;
+    $stock = isset($_POST['stock']) ? intval($_POST['stock']) : 1;
     $satuan_produk = htmlspecialchars($_POST['satuan_produk']);
     $ketersediaan = isset($_POST['ketersediaan']) ? intval($_POST['ketersediaan']) : 1;
 
-    // Proses upload gambar
-    $gambar = null;
-    if (!empty($_FILES['gambar']['name'])) {
-        $target_dir = "../gambar/"; // folder untuk menyimpan gambar
-        $gambar_name = time() . "_" . basename($_FILES['gambar']['name']);
-        $target_file = $target_dir . $gambar_name;
 
-        // Validasi file gambar
+    // Validasi kategori_id
+    $check_kategori = $conn->prepare("SELECT COUNT(*) FROM kategori WHERE id = ?");
+    $check_kategori->bind_param("i", $kategori_id);
+    $check_kategori->execute();
+    $check_kategori->bind_result($is_valid);
+    $check_kategori->fetch();
+    $check_kategori->close();
+
+    if (!$is_valid) {
+        die("Kategori tidak valid.");
+    }
+    
+    // Proses upload gambar jika ada file yang diupload
+    if (!empty($_FILES['gambar']['name'])) {
+        $target_dir = "../gambar/";
+        $target_file = $target_dir . basename($_FILES['gambar']['name']);
+        // Validasi file gambar (opsional, untuk memastikan hanya file gambar yang diterima)
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-        $allowed_types = ['jpg', 'jpeg', 'png'];
-        if (in_array($imageFileType, $allowed_types)) {
-            if (move_uploaded_file($_FILES['gambar']['tmp_name'], $target_file)) {
-                $gambar = $gambar_name;
-            } else {
-                echo "Gagal mengunggah gambar.";
-                exit();
-            }
+        $allowed_types = ['jpg', 'jpeg', 'png', 'gif'];
+
+        if (!in_array($imageFileType, $allowed_types)) {
+            echo "Hanya file gambar dengan format JPG, JPEG, PNG, dan GIF yang diperbolehkan.";
         } else {
-            echo "Format file tidak didukung. Harap unggah gambar dengan format JPG, JPEG, atau PNG.";
-            exit();
+            // Pindahkan file ke folder target
+            if (move_uploaded_file($_FILES['gambar']['tmp_name'], $target_file)) {
+                $gambar = $target_file; // Simpan path file gambar baru
+            } else {
+                echo "Gagal mengupload gambar.";
+            }
         }
     }
 
+    
     // Insert data ke tabel produk
     $query = "INSERT INTO produk (kategori_id, nama, deskripsi, kondisi_produk, bonus_produk, gambar, harga, stock, satuan_produk, ketersedian) 
               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -53,6 +72,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $stmt->close();
     $conn->close();
+
+    
 }
 ?>
 <!DOCTYPE html>
@@ -86,11 +107,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="form-group">
                 <label for="kategori-produk">Kategori Produk</label>
                 <select id="kategori-produk" name="kategori_id" required>
-                    <option value="">Pilih Kategori</option>
-                    <option value="1">Elektronik</option>
-                    <option value="2">Pakaian</option>
-                    <option value="3">Makanan</option>
-                    <option value="4">Lainnya</option>
+                <option value="">Pilih Kategori</option>
+                    <?php
+                        while ($kategori = $result_kategori->fetch_assoc()) {
+                            $kode_kategori = "KTG" . str_pad($kategori['id'], 3, "0", STR_PAD_LEFT); // Menghasilkan kode seperti "KTG001"
+                            $selected = $kategori['id'] == $produk['kategori_id'] ? "selected" : "";
+                            echo "<option value='{$kategori['id']}' $selected>[$kode_kategori] {$kategori['nama']}</option>";
+                        }
+                    ?>
                 </select>
             </div>
 
