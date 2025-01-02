@@ -57,17 +57,30 @@
                 <img src="https://via.placeholder.com/100" alt="Foto Profil" class="profile-photo">
             </div>
             <div class="profile-item">
-                <div><strong>Nama</strong><p>Laila</p></div>
+                <div>
+                    <strong>Nama</strong>
+                    <p id="view-nama">Laila</p>
+                    <input type="text" id="input-nama" name="nama" value="Laila" class="profile-input" style="display: none;">
+                </div>
             </div>
             <div class="profile-item">
-                <div><strong>E-Mail</strong><p>laila.yyy@gmail.com</p></div>
+                <div>
+                    <strong>E-Mail</strong>
+                    <p id="view-email">laila.yyy@gmail.com</p>
+                    <input type="email" id="input-email" name="email" value="laila.yyy@gmail.com" class="profile-input" style="display: none;">
+                </div>
             </div>
             <div class="profile-item">
-                <div><strong>No Hp</strong><p>081234567899001</p></div>
-                
+                <div>
+                    <strong>No Hp</strong>
+                    <p id="view-hp">081234567899001</p>
+                    <input type="text" id="input-hp" name="hp" value="081234567899001" class="profile-input" style="display: none;">
+                </div>
             </div>
-            <button class="edit-btn" onclick="toggleEditMode()">Edit Profil</button>
+            <button class="edit-btn" id="edit-button" onclick="toggleEditMode()">Edit Profil</button>
+            <button class="save-btn" id="save-button" style="display: none;" onclick="saveChanges()">Simpan</button>
         </div>
+
 
         <!-- data produk -->
         <div class="judul-content">
@@ -112,38 +125,57 @@
             <a href="tambah_produk.php" style="text-decoration:none"><button class="btn-tambah">Tambah Produk</button></a>
     </div>
     
-    <!-- script untuk edit bagain profil -->
+    <!-- js -->
     <script>
+        // script hapus produk
+        function hapusProduk(id) {
+            if (confirm("Apakah Anda yakin ingin menghapus produk ini?")) {
+                // Redirect ke halaman hapus dengan ID produk
+                window.location.href = "hapus_produk.php?id=" + id;
+            }
+        }
+
+        // script edit profil
         function toggleEditMode() {
-            const profileCard = document.getElementById('profileCard');
+            // Elemen tampilan
+            const viewNama = document.getElementById('view-nama');
+            const viewEmail = document.getElementById('view-email');
+            const viewHp = document.getElementById('view-hp');
+            
+            // Elemen input
+            const inputNama = document.getElementById('input-nama');
+            const inputEmail = document.getElementById('input-email');
+            const inputHp = document.getElementById('input-hp');
+            
+            // Tombol
+            const editButton = document.getElementById('edit-button');
+            const saveButton = document.getElementById('save-button');
 
-            profileCard.innerHTML = `
-                <form>
-                    <div class="profile-item">
-                        <div><strong>Foto Profil</strong></div>
-                        <input type="file" accept="image/*">
-                    </div>
-                    <div class="profile-item">
-                        <div><strong>Nama</strong></div>
-                        <input type="text" name="name" value="Laila" required>
-                    </div>
-                    <div class="profile-item">
-                        <div><strong>E-Mail</strong></div>
-                        <input type="email" name="email" value="laila.yyy@gmail.com" required>
-                    </div>
-                    <div class="profile-item">
-                        <div><strong>No Hp</strong></div>
-                        <input type="tel" name="phone" value="081234567899001" required>
-                    </div>
-                    <button type="submit" class="edit-btn">Simpan</button>
-                    <button type="button" class="edit-btn" onclick="cancelEditMode()">Batal</button>
-                </form>
-            `;
+            // Ubah ke mode edit
+            viewNama.style.display = 'none';
+            viewEmail.style.display = 'none';
+            viewHp.style.display = 'none';
+
+            inputNama.style.display = 'block';
+            inputEmail.style.display = 'block';
+            inputHp.style.display = 'block';
+
+            editButton.style.display = 'none';
+            saveButton.style.display = 'block';
         }
 
-        function cancelEditMode() {
-            location.reload(); // Reload the page to restore the original card
+        function saveChanges() {
+            // Lakukan validasi atau aksi lainnya di sini
+            document.getElementById('save-button').innerText = 'Menyimpan...';
+
+            // Simulasikan pengiriman form dengan fetch atau ajax
+            setTimeout(() => {
+                alert('Perubahan berhasil disimpan!');
+                location.reload();
+            }, 1500);
         }
+
+
         </script>
 </body>
 </html>
