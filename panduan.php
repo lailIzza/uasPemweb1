@@ -23,7 +23,7 @@
     }
 
     .header {
-        background-color: #1a1a2e;
+        background-color: #222d3c;
         color: white;
         text-align: center;
         padding: 40px;
@@ -83,6 +83,7 @@
 
     .step-content {
         flex: 1;
+        margin-left: 10px;
     }
 
     .step-content h3 {
@@ -147,7 +148,7 @@
         <div class="main-container">
             <div class="step-container">
                 <div class="step">
-                    <img alt="" height="100" src="gambar/home/p1.jpg" width="100" />
+                    <img alt="" height="100" src="gambar/home/panduan1.jpeg" width="100" />
                     <div class="step-content">
                         <h3>
                             <div class="step-number">
@@ -165,7 +166,7 @@
             </div>
             <div class="step-container">
                 <div class="step">
-                    <img alt="" height="100" src="gambar/home/p2.jpg" width="100" />
+                    <img alt="" height="100" src="gambar/home/panduan2.jpeg" width="100" />
                     <div class="step-content">
                         <h3>
                             <div class="step-number">
@@ -182,7 +183,7 @@
             </div>
             <div class="step-container">
                 <div class="step">
-                    <img alt="" height="100" src="gambar/home/p3.jpg" width="100" />
+                    <img alt="" height="100" src="gambar/home/panduan3.jpeg" width="100" />
                     <div class="step-content">
                         <h3>
                             <div class="step-number">
@@ -199,7 +200,7 @@
             </div>
             <div class="step-container">
                 <div class="step">
-                    <img alt="" height="100" src="gambar/home/p4.jpg" width="100" />
+                    <img alt="" height="100" src="gambar/home/panduan4.jpeg" width="100" />
                     <div class="step-content">
                         <h3>
                             <div class="step-number">
