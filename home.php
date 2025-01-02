@@ -289,7 +289,7 @@
                 </div>
             </div>
             <div class="load-more">
-                <button>Muat Lebih Banyak</button>
+                <a href="produk.php" style="text-decoration:none"><button>Muat Lebih Banyak</button></a>
             </div>
         </div>
     </div>

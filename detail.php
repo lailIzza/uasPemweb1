@@ -15,13 +15,13 @@
 
     <!-- Breadcrumb -->
     <div class="breadcrumb">
-        <a href="#">Home</a> / <a href="#">Product</a> / <strong>Detail Produk</strong>
+        <a href="home.php">Home</a> / <a href="produk.php">Product</a> / <strong>Detail Produk</strong>
     </div>
 
     <!-- Produk Detail -->
     <div class="container">
         <div class="produk-gambar">
-            <img src="gambar/samsunga22.jpg" alt="">
+            <img src="gambar/hp1.jpg" alt="">
         </div>
         <div class="produk-detail">
             <h1>Samsung Galaxy A80</h1>
@@ -39,7 +39,7 @@
                 <h3>Harga</h3>
                 <p class="harga">Rp. 1.500.000</p>
                 <p class="stock">Status : Tersedia</p>
-                <a href="" style="text-decoration: none;"><button>Pesan Sekarang</button></a>
+                <a href="checkout.php" style="text-decoration: none;"><button>Pesan Sekarang</button></a>
             </div>
         </div>
     </div>
