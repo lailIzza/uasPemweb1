@@ -1,6 +1,41 @@
+<?php
+require 'koneksi.php'; // Pastikan koneksi database benar
+
+// Ambil ID produk dari query string
+$id_produk = isset($_GET['id']) ? intval($_GET['id']) : 0;
+
+// Query untuk mendapatkan detail produk
+$sql_produk = "SELECT p.*, k.nama AS kategori_nama 
+               FROM produk p
+               LEFT JOIN kategori k ON p.kategori_id = k.id
+               WHERE p.id = ?";
+$stmt = $conn->prepare($sql_produk);
+$stmt->bind_param('i', $id_produk);
+$stmt->execute();
+$result_produk = $stmt->get_result();
+
+// Jika produk ditemukan
+if ($result_produk->num_rows > 0) {
+    $produk = $result_produk->fetch_assoc();
+} else {
+    die("Produk tidak ditemukan.");
+}
+
+// produk serupa
+$sql_serupa = "SELECT id, nama, gambar, harga 
+               FROM produk 
+               WHERE kategori_id = ? AND id != ? 
+               LIMIT 4"; // Maksimal 4 produk
+$stmt_serupa = $conn->prepare($sql_serupa);
+$stmt_serupa->bind_param('ii', $produk['kategori_id'], $id_produk);
+$stmt_serupa->execute();
+$result_serupa = $stmt_serupa->get_result();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +43,6 @@
     <link rel="stylesheet" href="css/detail.css">
     <title>Detail Produk</title>
 </head>
-
 <body>
     <!-- navbar -->
     <?php include('navbar.php'); ?>
@@ -21,72 +55,60 @@
     <!-- Produk Detail -->
     <div class="container">
         <div class="produk-gambar">
-            <img src="gambar/hp1.jpg" alt="">
+            <img src="gambar/<?= htmlspecialchars($produk['gambar']) ?>" alt="<?= htmlspecialchars($produk['nama']) ?>">
         </div>
         <div class="produk-detail">
-            <h1>Samsung Galaxy A80</h1>
+            <h1><?= htmlspecialchars($produk['nama']) ?></h1>
             <div class="produk-meta">
                 <span><i class='bx bx-check-shield'></i> Dijamin dengan baik</span>
-                <span><i class='bx bx-map'></i> Jakarta</span>
-                <span><i class='bx bx-time'></i> Diupload 3 Bulan lalu</span>
+                <span><i class='bx bx-map'></i> Lokasi: Surabaya</span>
+                <span><i class='bx bx-time'></i> Diupload 3 bulan lalu</span> <!-- Waktu statis, sesuaikan jika ada di database -->
             </div>
             <h3>Keterangan</h3>
             <p class="produk-keterangan">
-                Kami menyarankan para pengguna yang membeli item berharga mahal untuk
-                bertemu langsung dan melakukan pembelian di tempat yang aman (COD). - Admin Bekas.Id
+                Kami menyarankan para pengguna yang membeli item berharga mahal untuk bertemu langsung 
+                dan melakukan pembelian di tempat yang aman (COD). - Admin Bekas.Id
             </p>
             <div class="order-section">
                 <h3>Harga</h3>
-                <p class="harga">Rp. 1.500.000</p>
-                <p class="stock">Status : Tersedia</p>
-                <a href="checkout.php" style="text-decoration: none;"><button>Pesan Sekarang</button></a>
+                <p class="harga">Rp <?= number_format($produk['harga'], 0, ',', '.') ?></p>
+                <p class="stock">Status: <?= $produk['ketersedian'] ? 'Tersedia' : 'Tidak Tersedia' ?></p>
+                <a href="checkout.php?id=<?= $produk['id'] ?>" style="text-decoration: none;">
+                    <button>Pesan Sekarang</button>
+                </a>
             </div>
         </div>
     </div>
 
+
     <!-- Deskripsi Produk -->
     <div class="description-section">
         <h3>Deskripsi Produk</h3>
-        <h3>Samsung Galaxy A80</h3>
-        <p>
-            Nikmati pengalaman smartphone premium dengan Samsung Galaxy A80, yang menghadirkan
-            inovasi desain dan performa terbaik. Smartphone ini cocok untuk Anda yang mencari
-            keseimbangan antara gaya dan fungsi.
-        </p>
-        <h3>Kondisi Produk :</h3>
-        <ul>
-            <li>Kondisi: 90% seperti baru, layar mulus tanpa goresan.</li>
-            <li>Tidak ada cacat atau kerusakan pada fungsi.</li>
-            <li>Baterai masih sangat awet untuk penggunaan sehari-hari.</li>
-            <li>Hanya digunakan oleh pemilik pertama.</li>
-        </ul>
-        <h3>Bonus :</h3>
-        <ul>
-            <li>Kotak original Samsung Galaxy A80</li>
-            <li>Charger dan kabel data original</li>
-            <li>Earphone original Samsung</li>
-            <li>Case pelindung transparan</li>
-        </ul>
+        <p><?= htmlspecialchars($produk['deskripsi']) ?></p>
+        <h3>Kondisi Produk:</h3>
+        <p><?= htmlspecialchars($produk['kondisi_produk']) ?></p>
+        <h3>Bonus:</h3>
+        <p><?= htmlspecialchars($produk['bonus_produk'] ?: 'Tidak ada bonus.') ?></p>
     </div>
+
 
     <!-- Rekomendasi Produk -->
     <div class="produk-serupa">
         <h3>Produk Serupa</h3>
         <div class="produk-list">
-
-            <!-- Card Produk -->
-            <div class="produk-card">
-                <img src="gambar/realmec11.jpg" alt="HP 2">
-                <div class="produk-info">
-                    <p class="produk-judul">Realme C11</p>
-                    <p class="produk-harga">Rp 2.500.000</p>
-                    <p class="produk-rating"><i class='bx bxs-star'></i> 4.8 | Stok 5</p>
-                    <button>Detail Barang</button>
+            <?php while ($produk_serupa = $result_serupa->fetch_assoc()): ?>
+                <div class="produk-card">
+                    <img src="gambar/<?= htmlspecialchars($produk_serupa['gambar']) ?>" alt="<?= htmlspecialchars($produk_serupa['nama']) ?>">
+                    <div class="produk-info">
+                        <p class="produk-judul"><?= htmlspecialchars($produk_serupa['nama']) ?></p>
+                        <p class="produk-harga">Rp <?= number_format($produk_serupa['harga'], 0, ',', '.') ?></p>
+                        <a href="detail.php?id=<?= $produk_serupa['id'] ?>"><button>Detail Barang</button></a>
+                    </div>
                 </div>
-            </div>
-
+            <?php endwhile; ?>
         </div>
     </div>
+
 
     <!-- footer -->
     <?php include('footer.php'); ?>
