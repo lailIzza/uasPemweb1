@@ -39,7 +39,7 @@
             </ul>
         </aside>
         <main class="products">
-            <h2>Home/Produk</h2>
+            
             <div class="product-grid">
                 <div class="product-item">
                     <img src="gambar/Sepatu Cewek.jpg" alt="Product image" width="200" height="200" />
