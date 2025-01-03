@@ -2,7 +2,7 @@
 require "koneksi.php";
 
 // Query untuk mengambil data produk (hanya produk yang tersedia)
-$sql = "SELECT id, nama, deskripsi, gambar, harga, kondisi_produk FROM produk WHERE ketersedian = 1";
+$sql = "SELECT id, nama, deskripsi, gambar, harga, kondisi_produk FROM produk WHERE ketersedian = 1 LIMIT 10";
 $result = $conn->query($sql);
 ?>
 
@@ -15,7 +15,6 @@ $result = $conn->query($sql);
     <title>BekasId</title>
     <link rel="stylesheet" href="css/home.css">
 </head>
-
 <body>
 
     <!-- navbar -->
@@ -71,6 +70,7 @@ $result = $conn->query($sql);
                         echo '</div>';
                         echo '<div class="product-info">';
                         echo '<h3>' . htmlspecialchars($row['nama']) . '</h3>';
+                        echo '<h5>' .htmlspecialchars($row['kondisi_produk']) . '</h5>';
                         echo '<p class="price">Rp ' . number_format($row['harga'], 0, ',', '.') . '</p>';
                         echo '</div>';
                         echo '</div>';
