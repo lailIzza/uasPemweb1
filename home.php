@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        BekasId
-    </title>
+    <title>BekasId</title>
     <link rel="stylesheet" href="css/home.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -22,39 +20,31 @@
     <!-- Kategori Pilihan -->
     <div class="container">
         <div class="category-section">
-            <h2>
-                Kategori Pilihan
-            </h2>
+            <h2>Kategori Pilihan</h2>
             <div class="categories">
                 <div class="category">
-                    <img alt="Sepatu" height="100" src="gambar/home/foryu/kp1.jpg" width="100" />
-                    <p>
-                        Sepatu
-                    </p>
+                    <img src="gambar/home/sneakers.png" alt="">
+                    <p>Sepatu</p>
                 </div>
                 <div class="category">
-                    <img alt="Pakaian" height="100" src="gambar/home/foryu/kp3.jpg" width="100" />
-                    <p>
-                        Pakaian
-                    </p>
+                    <img src="gambar/home/polo.png" alt="">
+                    <p>Fashion Pria</p>
                 </div>
                 <div class="category">
-                    <img alt="Tas" height="100" src="gambar/home/foryu/kp2.jpg" width="100" />
-                    <p>
-                        Tas
-                    </p>
+                    <img src="gambar/home/dress.png" alt="">
+                    <p>Fashion Wanita</p>
                 </div>
                 <div class="category">
-                    <img alt="Elektronik" height="100" src="gambar/home/foryu/kp4.jpg" width="100" />
-                    <p>
-                        Elektronik
-                    </p>
+                    <img src="gambar/home/handbag.png" alt="">
+                    <p>Tas</p>
                 </div>
                 <div class="category">
-                    <img alt="Aksesoris" height="100" src="gambar/home/foryu/kp5.jpg" width="100" />
-                    <p>
-                        Aksesoris
-                    </p>
+                    <img src="gambar/home/laptop.png" alt="">
+                    <p>Elektronik</p>
+                </div>
+                <div class="category">
+                    <img src="gambar/home/jewelry.png" alt="">
+                    <p>Aksesoris</p>
                 </div>
             </div>
         </div>
@@ -62,9 +52,7 @@
 
         <!-- Rekomendasi -->
         <div class="recommendation-section">
-            <h2>
-                Rekomendasi untukmu
-            </h2>
+            <h2>Rekomendasi untukmu</h2>
             <div class="recommendations">
                 <div class="product-card">
                     <img alt="Product Image" height="150" src="gambar/hp2.jpg" width="150" />
