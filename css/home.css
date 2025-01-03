@@ -52,64 +52,114 @@ body {
 }
 
 /*Rekomendasi*/
-
-.recommendations {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 35px;
-
+.recommendation-section {
+    margin-top: 40px;
 }
+
+.recommendation-section h2 {
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center align products */
+}
+.recommendation-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+
 .product-card {
+    width: 200px; /* Ukuran kartu produk */
     background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    margin-top: 20px;
 }
-.product-card img {
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.image-wrapper {
     width: 100%;
-    border-radius: 10px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: #f9f9f9;
 }
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Menjaga proporsi gambar */
+}
+
 .product-info {
-    margin-top: 10px;
+    padding: 10px;
 }
+
 .product-info h3 {
-    font-size: 1em;
-    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
-.product-info p {
-    margin: 5px 0;
-    color: #888;
-}
+
 .product-info .price {
-    font-size: 1.2em;
-    color: #000;
+    font-size: 14px;
+    color: #28a745;
+    font-weight: bold;
+    margin-top: 5px;
 }
-.product-info .rating {
-    color: #f39c12;
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(100% / 2 - 20px); /* 2 products per row for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: calc(100% - 20px); /* 1 product per row for mobile */
+    }
 }
 
 /*Muat lebih banyak*/
 
-.load-more {
+.see-more {
     text-align: center;
-    margin-bottom: 30px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
-.load-more button {
-    background-color:#222D3C;
+.btn-see-more {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
     color: #fff;
-    border: none;
-    padding: 20px 25px;
-    border-radius: 10px;
-    cursor: pointer;
+    background-color: #222d3c;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-.load-more button:hover {
-    background-color:#000000;
+.btn-see-more:hover {
+    background-color: #0056b3;
 }
+
 
 /*Harus Berbelanja di Bekas.id*/
 .container-opsi {

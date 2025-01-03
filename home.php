@@ -1,3 +1,11 @@
+<?php
+require "koneksi.php";
+
+// Query untuk mengambil data produk (hanya produk yang tersedia)
+$sql = "SELECT id, nama, deskripsi, gambar, harga, kondisi_produk FROM produk WHERE ketersedian = 1";
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BekasId</title>
     <link rel="stylesheet" href="css/home.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -48,239 +55,37 @@
                 </div>
             </div>
         </div>
-        <!-- END Kategori -->
+    </div>
 
         <!-- Rekomendasi -->
         <div class="recommendation-section">
             <h2>Rekomendasi untukmu</h2>
-            <div class="recommendations">
-                <div class="product-card">
-                    <img alt="Product Image" height="150" src="gambar/hp2.jpg" width="150" />
-                    <div class="product-info">
-                        <h3>
-                            Realme C11 RAM 2+32
-                        </h3>
-                        <p class="price">
-                            Rp. 1.929.000
-                        </p>
-                        <p class="rating">
-                            <i class="fas fa-star">
-                            </i>
-                            4.8 | Sisa 2
-                        </p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy2.jpg" width="150" />
-                    <div class="product-info">
-                        <h3>
-                            Kamera Nikon D3300 KIT-18-MM
-                        </h3>
-                        <p class="price">
-                            Rp. 2.220.000
-                        </p>
-                        <p class="rating">
-                            <i class="fas fa-star">
-                            </i>
-                            4.7 | Sisa 4
-                        </p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy3.jpg" width="150" />
-                    <div class="product-info">
-                        <h3>
-                            Tas Selempang Eiger 1989
-                        </h3>
-                        <p class="price">
-                            Rp. 265.000
-                        </p>
-                        <p class="rating">
-                            <i class="fas fa-star">
-                            </i>
-                            4.8 | Sisa 8
-                        </p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy4.jpg" width="150" />
-                    <div class="product-info">
-                        <h3>
-                            Samsung A9 2018 6/128GB
-                        </h3>
-                        <p class="price">
-                            Rp. 2.123.000
-                        </p>
-                        <p class="rating">
-                            <i class="fas fa-star">
-                            </i>
-                            4.7 | Sisa 1
-                        </p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy5.jpg" width="150" />
-                    <div class="product-info">
-                        <h3>
-                            Speaker Polytron Pas 8F12 Bluetooth
-                        </h3>
-                        <p class="price">
-                            Rp. 970.200
-                        </p>
-                        <p class="rating">
-                            <i class="fas fa-star">
-                            </i>
-                            4.9 | Sisa 5
-                        </p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy6.jpg" width="150" />
-                    <div class="product-info">
-                        <h3>
-                            Jaket Arcteryx Shashka Waterproof
-                        </h3>
-                        <p class="price">
-                            Rp. 3.445.000
-                        </p>
-                        <p class="rating">
-                            <i class="fas fa-star">
-                            </i>
-                            4.8 | Sisa 2
-                        </p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy7.jpg" width="150" />
-                    <div class="product-info">
-                        <h3>
-                            Sepatu Nike Air
-                        </h3>
-                        <p class="price">
-                            Rp. 2.000.000
-                        </p>
-                        <p class="rating">
-                            <i class="fas fa-star">
-                            </i>
-                            4.8 | Sisa 3
-                        </p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy8.jpg" width="150" />
-                    <div class="product-info">
-                        <h3>
-                            Sepatu New Balance 574 X Stone Island
-                        </h3>
-                        <p class="price">
-                            Rp. 1.509.000
-                        </p>
-                        <p class="rating">
-                            <i class="fas fa-star">
-                            </i>
-                            4.9 | Sisa 2
-                        </p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy9.jpg" width="150" />
-                    <div class="product-info">
-                        <h3>
-                            Laptop Acer 12 Inch 11.6 d722
-                        </h3>
-                        <p class="price">
-                            Rp. 2.299.000
-                        </p>
-                        <p class="rating">
-                            <i class="fas fa-star">
-                            </i>
-                            4.7 | Sisa 4
-                        </p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy10.jpg" width="150" />
-                    <div class="product-info">
-                        <h3>
-                            Kamera Mirrorless Fujifilm xa7 x-a7
-                        </h3>
-                        <p class="price">
-                            Rp. 6.550.000
-                        </p>
-                        <p class="rating">
-                            <i class="fas fa-star">
-                            </i>
-                            4.9 | Sisa 1
-                        </p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy11.jpg" width="150" />
-                    <div class="product-info">
-                        <h3>
-                            Celana Tactical Panjang Outdoor
-                        </h3>
-                        <p class="price">
-                            Rp. 220.000
-                        </p>
-                        <p class="rating">
-                            <i class="fas fa-star">
-                            </i>
-                            4.7 | Sisa 5
-                        </p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy12.jpg" width="150" />
-                    <div class="product-info">
-                        <h3>
-                            Celana Pendek Eiger Mercury
-                        </h3>
-                        <p class="price">
-                            Rp. 130.000
-                        </p>
-                        <p class="rating">
-                            <i class="fas fa-star"></i> </i>
-                            4.8 | Sisa 2
-                        </p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy13.jpg" width="150" />
-                    <div class="product-info">
-                        <h3>
-                            Tas Laptop Original HP 15.6 Inch
-                        </h3>
-                        <p class="price">
-                            Rp. 65.000
-                        </p>
-                        <p class="rating">
-                            <i class="fas fa-star"></i> </i>
-                            4.6 | Sisa 3
-                        </p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img alt="Product Image" height="150" src="gambar/home/foryu/fy14.jpg" width="150" />
-                    <div class="product-info">
-                        <h3>
-                            TV Sharp Led 24 Inch - LC24LE170i
-                        </h3>
-                        <p class="price">
-                            Rp. 999.000
-                        </p>
-                        <p class="rating">
-                            <i class="fas fa-star"></i> </i>
-                            4.8 | Sisa 1
-                        </p>
-                    </div>
-                </div>
+            <div class="row">
+                <?php
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo '<a href="detail.php?id=' . $row['id'] . '" style="text-decoration: none; color: inherit;">';
+                        echo '<div class="product-card">';
+                        echo '<div class="image-wrapper">';
+                        echo '<img src="' . htmlspecialchars($row['gambar']) . '" alt="' . htmlspecialchars($row['nama']) . '">';
+                        echo '</div>';
+                        echo '<div class="product-info">';
+                        echo '<h3>' . htmlspecialchars($row['nama']) . '</h3>';
+                        echo '<p class="price">Rp ' . number_format($row['harga'], 0, ',', '.') . '</p>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</a>';
+                    }
+                } else {
+                    echo '<p>Tidak ada produk tersedia.</p>';
+                }
+                ?>
             </div>
-            <div class="load-more">
-                <a href="produk.php" style="text-decoration:none"><button>Muat Lebih Banyak</button></a>
+            
+            <div class="see-more">
+                <a href="produk.php" class="btn-see-more">Lihat Lebih Banyak</a>
             </div>
         </div>
-    </div>
     <!-- END Rekomendasi -->
 
     <!-- Opsi -->
@@ -332,5 +137,8 @@
     <?php include('footer.php'); ?>
 
 </body>
-
 </html>
+
+<?php
+$conn->close();
+?>
