@@ -112,17 +112,26 @@ body {
 
 .product-info h3 {
     font-size: 16px;
-    color: #333;
+    color: #222d3c;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    margin-bottom: 0;
+    text-align: left;
+}
+.product-info h5{
+    margin-top: 0;
+    font-size: 14px;
+    color: #444;
+    text-align: left;
 }
 
 .product-info .price {
-    font-size: 14px;
-    color: #28a745;
+    font-size: 16px;
+    color: #222d3c;
     font-weight: bold;
     margin-top: 5px;
+    text-align: left;
 }
 
 /* Responsiveness */
