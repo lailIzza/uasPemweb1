@@ -70,7 +70,7 @@
                     <img alt="Product Image" height="150" src="gambar/hp2.jpg" width="150" />
                     <div class="product-info">
                         <h3>
-                            Realme C11 RAM 2+32
+                            Realme C11 Second RAM 2+32
                         </h3>
                         <p class="price">
                             Rp. 1.929.000
@@ -102,7 +102,7 @@
                     <img alt="Product Image" height="150" src="gambar/home/foryu/fy3.jpg" width="150" />
                     <div class="product-info">
                         <h3>
-                            Tas Selempang Eiger 1989
+                            Tas Selempang Eiger Portege Pounch Landscape
                         </h3>
                         <p class="price">
                             Rp. 265.000
@@ -230,15 +230,15 @@
                     <img alt="Product Image" height="150" src="gambar/home/foryu/fy11.jpg" width="150" />
                     <div class="product-info">
                         <h3>
-                            Celana Tactical Panjang Outdoor
+                            Carhartt Double Knee Work Pants B136 BLK
                         </h3>
                         <p class="price">
-                            Rp. 220.000
+                            Rp. 1.320.000
                         </p>
                         <p class="rating">
                             <i class="fas fa-star">
                             </i>
-                            4.7 | Sisa 5
+                            4.9 | Sisa 3
                         </p>
                     </div>
                 </div>
