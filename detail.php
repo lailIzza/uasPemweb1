@@ -1,5 +1,5 @@
 <?php
-require 'koneksi.php'; // Pastikan koneksi database benar
+require 'koneksi.php';
 
 // Ambil ID produk dari query string
 $id_produk = isset($_GET['id']) ? intval($_GET['id']) : 0;
