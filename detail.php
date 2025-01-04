@@ -73,7 +73,7 @@ $result_serupa = $stmt_serupa->get_result();
                 <h3>Harga</h3>
                 <p class="harga">Rp <?= number_format($produk['harga'], 0, ',', '.') ?></p>
                 <p class="stock">Status: <?= $produk['ketersedian'] ? 'Tersedia' : 'Tidak Tersedia' ?></p>
-                <a href="checkout.php?id=<?= $produk['id'] ?>" style="text-decoration: none;">
+                <a href="user/checkout.php?id=<?= $produk['id'] ?>" style="text-decoration: none;">
                     <button>Pesan Sekarang</button>
                 </a>
             </div>
