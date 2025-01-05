@@ -25,7 +25,7 @@
     }
 
     .carousel-nav-center .owl-nav button i {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
     .carousel-nav-center .owl-nav button {
@@ -55,21 +55,21 @@
         opacity: 1;
     }
 
-    .hero-slide-item {
+    .slide-item {
         padding-top: 34%;
         position: relative;
         overflow: hidden;
         right: 10px;
     }
 
-    .hero-slide-item img {
+    .slide-item img {
         width: 100%;
         position: absolute;
         top: 20px;
         left: 20px;
     }
 
-    .hero-slide-item-content {
+    .slide-item-content {
         position: absolute;
         top: 0;
         left: 0;
@@ -82,24 +82,22 @@
 </head>
 
 <body>
-    <div class="hero-section">
-        <div class="hero-slide">
-            <div class="owl-carousel carousel-nav-center" id="hero-carousel">
-                <div class="hero-slide-item">
-                    <img src="./gambar/home/f1.jpg" alt="">
-                </div>
-                <div class="hero-slide-item">
-                    <img src="./gambar/home/f3.jpg" alt="">
-                </div>
-                <div class="hero-slide-item">
-                    <img src="./gambar/home/f4.jpg" alt="">
-                </div>
-                <div class="hero-slide-item">
-                    <img src="./gambar/home/f5.jpg" alt="">
-                </div>
-            </div>
+
+    <div class="owl-carousel carousel-nav-center" id="hero-carousel">
+        <div class="slide-item">
+            <img src="./gambar/home/f1.jpg" alt="">
+        </div>
+        <div class="slide-item">
+            <img src="./gambar/home/f3.jpg" alt="">
+        </div>
+        <div class="slide-item">
+            <img src="./gambar/home/f4.jpg" alt="">
+        </div>
+        <div class="slide-item">
+            <img src="./gambar/home/f5.jpg" alt="">
         </div>
     </div>
+
 
     <!-- JQUERY  -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -112,10 +110,6 @@
     <script>
     // Setting OWL CAROUSEL
     $(document).ready(() => {
-        $("#hamburger-menu").click(() => {
-            $("#hamburger-menu").toggleClass("active");
-            $("#nav-menu").toggleClass("active");
-        });
 
         let navText = [
             "<i class='bx bx-chevron-left'></i>",
@@ -130,25 +124,6 @@
             navText: navText,
             autoplay: true,
             autoplayHoverPause: true,
-        });
-
-        $(".movies-slide").owlCarousel({
-            items: 2,
-            dots: false,
-            nav: true,
-            navText: navText,
-            margin: 45,
-            responsive: {
-                500: {
-                    items: 4,
-                },
-                1280: {
-                    items: 4,
-                },
-                1600: {
-                    items: 6,
-                },
-            },
         });
     });
     </script>
