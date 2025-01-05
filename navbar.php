@@ -91,7 +91,7 @@
         <div class="nav-links">
             <a href="../produk.php">Produk</a>
             <a href="../panduan.php">Panduan Belanja</a>
-            <a href="../tentang_kami.php">Tentang Kami</a>
+            <a href="uasPemweb1/tentang_kami.php">Tentang Kami</a>
         </div>
     </div>
     <nav class="main-navbar">
