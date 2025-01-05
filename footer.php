@@ -112,7 +112,7 @@
             <div class="footer-center">
                 <h4>Navigasi</h4>
                 <ul>
-                    <li><a href="../tentang_kami.php">Tentang Kami</a></li>
+                    <li><a href="#">Tentang Kami</a></li>
                     <li><a href="#">Kontak</a></li>
                     <li><a href="#">Privasi</a></li>
                     <li><a href="#">Syarat & Ketentuan</a></li>
