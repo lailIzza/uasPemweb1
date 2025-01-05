@@ -38,7 +38,7 @@
     }
 
     .header p {
-        font-size: 22px;
+        font-size: 18px;
         margin: 10px 0 0;
     }
 
@@ -140,7 +140,7 @@
                     Panduan Belanja
                 </h1>
                 <p>
-                    Selamat datang di Bekas.id! Kami di sini untuk memastikan pengalaman belanja Anda berjalan lancar,
+                    Selamat datang di Bekas.id! Kami di sini untuk memastikan pengalaman <br>belanja Anda berjalan lancar,
                     aman, dan menyenangkan. Ikuti panduan sederhana berikut untuk memulai:
                 </p>
             </div>
