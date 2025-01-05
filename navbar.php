@@ -114,7 +114,7 @@
             </form>
         </div>
 
-        <a href="admin/profil.php"><i class='bx bx-user user-icon'></i></a>
+        <a href="login/login.php"><i class='bx bx-user user-icon'></i></a>
     </nav>
 </body>
 </html>

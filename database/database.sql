@@ -69,7 +69,7 @@ CREATE TABLE `orders` (
   `delivered_date` datetime DEFAULT NULL,
   `finish_date` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  FOREIGN KEY (`customer_id`) REFERENCES `customers`(`id`) ON DELETE SET NULL,
+  FOREIGN KEY (`customer_id`) REFERENCES `customers`(`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- tabel metode pengiriman 
