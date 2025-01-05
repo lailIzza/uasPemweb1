@@ -1,0 +1,202 @@
+.sidebar {
+    width: 250px;
+    background-color: #222d3c;
+    color: white;
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+.sidebar .profile-section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #3e3e5e;
+    transition: background-color 0.3s;
+}
+.sidebar .profile-section:hover {
+    background-color: #3e3e5e;
+}
+.sidebar .profile-section img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #f9a826;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar ul li {
+    text-decoration: none;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+.sidebar ul li i {
+    margin-right: 10px;
+}
+.sidebar ul li:hover {
+    background-color: #3e3e5e;
+    cursor: pointer;
+    color: #f9a826;
+}
+
+.sidebar ul a {
+    text-decoration: none;
+    color: inherit; /* Agar warna mengikuti warna teks di sidebar */
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.sidebar ul a:hover {
+    background-color: #3e3e5e;
+    color: #f9a826;
+}
+
+/* main content */
+.main-content {
+    margin-top: 0;
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+/* dashboard */
+.welcome-card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.welcome-card h3 {
+    font-size: 20px;
+    color: #222d3c;
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+.welcome-card p{
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 14px;
+}
+.welcome-card img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+/* judul tiap section */
+.judul-content h3 {
+    color: #222d3c;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+.judul-content p {
+    color: #2b2b2b;
+    font-size: 14px;
+    margin-top: 0px;
+}
+
+/* profil */
+.profile-card {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.profile-card .profile-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.profile-card .profile-item:last-child {
+    border-bottom: none;
+}
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 10px;
+}
+.edit-btn {
+    background-color: #f9a826;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.edit-btn:hover {
+    background-color: #e89a1f;
+}
+
+
+/* data transaksi */
+.container {
+    width: 100%;
+    margin: 10px auto;
+    background-color: #f2f2f2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+.order-number{
+    background-color: #c9c9c9;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 6px; 
+    text-align: center;
+}
+.section {
+    padding: 10px;
+}
+.section h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.section p {
+    margin: 5px 0;
+}
+.section p span {
+    font-weight: bold;
+    color: #2b2b2b;
+}
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+.flex-container div {
+    flex: 1; 
+    padding: 5px;
+    box-sizing: border-box; 
+}
+.divider {
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+    .flex-container {
+        flex-direction: column;
+    }
+}

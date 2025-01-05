@@ -58,7 +58,7 @@ $result = $conn->query($sql);
 
         <!-- Rekomendasi -->
         <div class="recommendation-section">
-            <h2>Rekomendasi untukmu</h2>
+            <h2>Rekomendasi untuk saya</h2>
             <div class="row">
                 <?php
                 if ($result->num_rows > 0) {
