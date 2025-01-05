@@ -33,8 +33,6 @@ CREATE TABLE `produk` (
     FOREIGN KEY (`kategori_id`) REFERENCES `kategori` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-
-
 -- tabel user / akun
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -66,7 +64,6 @@ CREATE TABLE `orders` (
   `order_status` enum('1','2','3','4','5') DEFAULT '1',
   `order_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `total_price` decimal(10,2) DEFAULT NULL,
-  `total_items` int(10) DEFAULT NULL,
   `payment_method` int(11) DEFAULT 1,
   `delivery_data` text DEFAULT NULL,
   `delivered_date` datetime DEFAULT NULL,
