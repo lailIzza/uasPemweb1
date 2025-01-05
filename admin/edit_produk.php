@@ -36,22 +36,31 @@ if (isset($_POST['simpan'])) {
 
     // Proses upload gambar jika ada file yang diupload
     if (!empty($_FILES['gambar']['name'])) {
-        $target_dir = "uploads/";
+        $target_dir = "../gambar/";
         $target_file = $target_dir . basename($_FILES['gambar']['name']);
-        if (move_uploaded_file($_FILES['gambar']['tmp_name'], $target_file)) {
-            $gambar = $target_file; // Simpan path file gambar baru
+        // Validasi file gambar (opsional, untuk memastikan hanya file gambar yang diterima)
+        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+        $allowed_types = ['jpg', 'jpeg', 'png', 'gif'];
+
+        if (!in_array($imageFileType, $allowed_types)) {
+            echo "Hanya file gambar dengan format JPG, JPEG, PNG, dan GIF yang diperbolehkan.";
         } else {
-            echo "Gagal mengupload gambar.";
+            // Pindahkan file ke folder target
+            if (move_uploaded_file($_FILES['gambar']['tmp_name'], $target_file)) {
+                $gambar = $target_file; // Simpan path file gambar baru
+            } else {
+                echo "Gagal mengupload gambar.";
+            }
         }
     }
 
     // Update data produk di database
-    $sql = "UPDATE produk SET nama = ?, kategori_id = ?, kondisi_produk = ?, bonus_produk = ?, harga = ?, stock = ?, satuan_produk = ?, ketersediaan = ?, deskripsi = ?, gambar = ? WHERE id = ?";
+    $sql = "UPDATE produk SET nama = ?, kategori_id = ?, kondisi_produk = ?, bonus_produk = ?, harga = ?, stock = ?, satuan_produk = ?, ketersedian = ?, deskripsi = ?, gambar = ? WHERE id = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sissdiisssi", $nama, $kategori_id, $kondisi_produk, $bonus_produk, $harga, $stock, $satuan_produk, $ketersediaan, $deskripsi, $gambar, $id);
+    $stmt->bind_param("sissdiisssi", $nama, $kategori_id, $kondisi_produk, $bonus_produk, $harga, $stock, $satuan_produk, $ketersedian, $deskripsi, $gambar, $id);
     if ($stmt->execute()) {
         echo "Produk berhasil diperbarui.";
-        header("Location: daftar_produk.php"); // Redirect ke halaman daftar produk
+        header("Location: profil.php"); // Redirect ke halaman daftar produk
         exit;
     } else {
         echo "Gagal memperbarui produk.";
@@ -100,10 +109,11 @@ if ($result_kategori === false) {
                 <select id="kategori-produk" name="kategori_id" required>
                     <option value="">Pilih Kategori</option>
                     <?php
-                    while ($kategori = $result_kategori->fetch_assoc()) {
-                        $selected = $kategori['id'] == $produk['kategori_id'] ? "selected" : "";
-                        echo "<option value='{$kategori['id']}' $selected>{$kategori['nama_kategori']}</option>";
-                    }
+                        while ($kategori = $result_kategori->fetch_assoc()) {
+                            $kode_kategori = "KTG" . str_pad($kategori['id'], 3, "0", STR_PAD_LEFT); // Menghasilkan kode seperti "KTG001"
+                            $selected = $kategori['id'] == $produk['kategori_id'] ? "selected" : "";
+                            echo "<option value='{$kategori['id']}' $selected>[$kode_kategori] {$kategori['nama']}</option>";
+                        }
                     ?>
                 </select>
             </div>
@@ -149,9 +159,10 @@ if ($result_kategori === false) {
             <div class="form-group">
                 <label for="gambar-produk">Gambar Produk</label>
                 <div class="file-input">
-                    <img id="preview-gambar" src="<?= htmlspecialchars($produk['gambar']) ?>" alt="Preview Gambar">
-                    <label for="gambar-produk">Masukkan / Pilih Gambar</label>
-                    <input type="file" id="gambar-produk" name="gambar" accept="image/*" onchange="previewImage(event)">
+                    <!-- Menampilkan gambar -->
+                    <img id="preview-gambar" src="<?= htmlspecialchars($produk['gambar'] ?? 'default-image.jpg') ?>" alt="Preview Gambar" style="width: 150px; height: auto; border: 1px solid #ddd; margin-bottom: 10px;">
+                    <!-- Input untuk memilih gambar baru -->
+                    <input type="file" id="gambar-produk" name="gambar" accept="image/*" onchange="previewImage(event)" style="display: block; margin-top: 5px;">
                 </div>
             </div>
             <button type="submit" class="submit-button" name="simpan">Simpan Perubahan</button>
@@ -161,11 +172,17 @@ if ($result_kategori === false) {
 
     <!-- js untuk preview gambar yang diupload -->
     <script>
-    function previewImage(event) {
-        const reader = new FileReader();
+     function previewImage(event) {
+        const input = event.target;
         const preview = document.getElementById('preview-gambar');
-        reader.onload = () => preview.src = reader.result;
-        reader.readAsDataURL(event.target.files[0]);
+
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                preview.src = e.target.result; // Mengganti gambar dengan hasil pratinjau
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
     }
     </script>
 </body>

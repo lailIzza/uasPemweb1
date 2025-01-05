@@ -8,11 +8,11 @@ CREATE TABLE `kategori` (
 
 INSERT INTO `kategori` (`nama`, `deskripsi`) 
 VALUES 
-('Elektronik', 'Produk-produk elektronik seperti laptop, TV, dan gadget lainnya.'),
 ('Sepatu', 'Beragam sepatu untuk pria, wanita, dan anak-anak.'),
-('Tas', 'Berbagai jenis tas seperti ransel, selempang, dan tote bag.'),
 ('Fashion Pria', 'Pakaian dan aksesoris khusus untuk pria.'),
 ('Fashion Wanita', 'Pakaian dan aksesoris eksklusif untuk wanita.'),
+('Tas', 'Berbagai jenis tas seperti ransel, selempang, dan tote bag.'),
+('Elektronik', 'Produk-produk elektronik seperti laptop, TV, dan gadget lainnya.'),
 ('Aksesoris', 'Aksesoris pelengkap seperti jam tangan, gelang, dan lainnya.');
 
 -- tabel produk

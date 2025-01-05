@@ -89,18 +89,29 @@
     <div class="top-navbar">
         <!-- Navbar 1-->
         <div class="nav-links">
-            <a href="#">Produk</a>
-            <a href="#">Promo</a>
+            <a href="../produk.php">Produk</a>
+            <a href="../panduan.php">Panduan Belanja</a>
             <a href="#">Tentang Kami</a>
         </div>
     </div>
     <nav class="main-navbar">
         <!-- Navbar 2-->
-        <a href="#" class="logo">Bekas.<span style="color: #fcbf49;">Id</span></a>
+        <a href="../home.php" class="logo">Bekas.<span style="color: #fcbf49;">Id</span></a>
 
         <div class="search-bar">
-            <input type="text" placeholder="Cari produk" id="searchInput">
-            <button onclick="performSearch()"><i class='bx bx-search'></i></button>
+            <form action="../produk.php" method="GET" style="display: flex; width: 100%;">
+                <input 
+                    type="text" 
+                    name="search" 
+                    placeholder="Cari produk" 
+                    id="searchInput" 
+                    style="flex: 1; border: none; outline: none; font-size: 14px;"
+                    value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>"
+                >
+                <button type="submit" style="background: none; border: none; cursor: pointer;">
+                    <i class='bx bx-search' style="font-size: 18px; color: #888;"></i>
+                </button>
+            </form>
         </div>
 
         <a href="admin/profil.php"><i class='bx bx-user user-icon'></i></a>
