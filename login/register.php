@@ -2,19 +2,7 @@
 // Memulai sesi
 session_start();
 
-// Menyambungkan ke database
-$servername = "localhost"; // Ganti dengan host database Anda
-$username = "root"; // Ganti dengan username database Anda
-$password = ""; // Ganti dengan password database Anda
-$dbname = "your_database_name"; // Ganti dengan nama database Anda
-
-// Membuat koneksi
-$conn = new mysqli("localhost", "root", "", "bekasid");
-
-// Cek koneksi
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require "../koneksi.php"; //koneksi database
 
 // Menangani proses pendaftaran saat formulir disubmit
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -54,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if (in_array($file_ext, $allowed_ext)) {
                     // Membuat nama file baru untuk menghindari konflik
                     $profile_picture = uniqid('profile_', true) . '.' . $file_ext;
-                    $upload_dir = 'uploads/';
+                    $upload_dir = '../gambar/';
                     if (move_uploaded_file($file_tmp, $upload_dir . $profile_picture)) {
                         // Gambar berhasil diupload
                     } else {
