@@ -1,24 +1,11 @@
 <?php
-// Memulai sesi
+
 session_start();
 
-// Menyambungkan ke database
-$servername = "localhost"; // Ganti dengan host database Anda
-$username = "root"; // Ganti dengan username database Anda
-$password = ""; // Ganti dengan password database Anda
-$dbname = "your_database_name"; // Ganti dengan nama database Anda
-
-// Membuat koneksi
-$conn = new mysqli("localhost", "root" , "" , "bekasid" );
-
-// Cek koneksi
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require "../koneksi.php"; //koneksi database
 
 // Menangani login saat formulir disubmit
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Mengambil data dari form login
     $input_username = $_POST['username'];
     $input_password = $_POST['password'];
 
@@ -39,9 +26,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Menyimpan data pengguna dalam session
             $_SESSION['username'] = $user['username'];
             $_SESSION['user_id'] = $user['id'];
+            $_SESSION['role'] = $user['role']; // Menyimpan role ke session
             
-            // Arahkan ke halaman profil
-            header("Location:admin/profil.php");
+           // Arahkan ke halaman berdasarkan role
+           if ($user['role'] === 'admin') {
+                header("Location: ../admin/profil.php");
+            } elseif ($user['role'] === 'customer') {
+                header("Location: ../user/profilU.php");
+            } else {
+                // Default jika role tidak dikenali
+                header("Location: login.php?error=unknown_role");
+            }
             exit();
         } else {
             $error_message = "Password salah!";
