@@ -1,5 +1,10 @@
 <?php
-session_start();
+require 'koneksi.php';
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 
 // Cek apakah user sudah login
 $isLoggedIn = isset($_SESSION['username']);
