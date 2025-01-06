@@ -1,6 +1,11 @@
 <?php
 require 'koneksi.php';
 
+// session untuk tombol pesan sekarang
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 // Ambil ID produk dari query string
 $id_produk = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
@@ -30,6 +35,10 @@ $stmt_serupa = $conn->prepare($sql_serupa);
 $stmt_serupa->bind_param('ii', $produk['kategori_id'], $id_produk);
 $stmt_serupa->execute();
 $result_serupa = $stmt_serupa->get_result();
+
+
+// cek apakah pengguna sudah login atau belum
+$isLoggedIn = isset($_SESSION['username']);
 
 ?>
 
@@ -73,9 +82,16 @@ $result_serupa = $stmt_serupa->get_result();
                 <h3>Harga</h3>
                 <p class="harga">Rp <?= number_format($produk['harga'], 0, ',', '.') ?></p>
                 <p class="stock">Status: <?= $produk['ketersedian'] ? 'Tersedia' : 'Tidak Tersedia' ?></p>
-                <a href="user/checkout.php?id=<?= $produk['id'] ?>" style="text-decoration: none;">
-                    <button>Pesan Sekarang</button>
-                </a>
+                <!-- untuk cek apakah user sudah login -->
+                <?php if ($isLoggedIn): ?>
+                    <a href="user/checkout.php?id=<?= $produk['id'] ?>" style="text-decoration: none;">
+                        <button>Pesan Sekarang</button>
+                    </a>
+                <?php else: ?>
+                    <a href="../login/login.php" onclick="alert('Anda harus login untuk memesan produk ini!'); return false;" style="text-decoration: none;">
+                        <button>Pesan Sekarang</button>
+                    </a>
+                <?php endif; ?>
             </div>
         </div>
     </div>

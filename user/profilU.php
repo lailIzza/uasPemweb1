@@ -20,8 +20,8 @@
             <ul>
                 <li><a href="dashboard.php"><i class="bx bx-home"></i>Dashboard</a></li>
                 <li><a href="#profil"><i class="bx bx-user"></i>Profil Saya</a></li>
-                <li><a href="#dataTransaksi"><i class="bx bx-box"></i>Data Transaksi</a></li>
-                <li><a href="tambah_produk.php"><i class="bx bx-minus-circle"></i>Keluar</a></li>
+                <li><a href="#dataTransaksi"><i class="bx bx-box"></i>Riwayat Pesanan</a></li>
+                <li><a href="../login/logout.php"><i class="bx bx-minus-circle"></i>Keluar</a></li>
             </ul>
     </div>
 
@@ -31,7 +31,6 @@
         <!-- Dashboard -->
         <h2>Dashboard</h2>
         <div class="welcome-card">
-            <img src="gambar/woman.png" alt="">
             <div>
                 <h3>Selamat datang, Laila</h3>
                 <p>Kelola informasi akun admin Anda untuk memastikan pengelolaan sistem tetap aman dan efisien.</p>

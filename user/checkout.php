@@ -40,6 +40,36 @@
         $alamat = $_POST['alamat'];
         $payment_method = intval($_POST['payment_method']);
         $shipping_method = intval($_POST['shipping_method']);
+        $user_id = null;
+
+        // Validasi input
+        if (empty($nama) || empty($nomor_hp) || empty($email) || empty($alamat)) {
+            die("Semua field harus diisi.");
+        }
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            die("Format email tidak valid.");
+        }
+
+        // Cek apakah customer sudah ada berdasarkan nama dan nomor HP
+        $sql_check_customer = "SELECT id FROM customers WHERE name = ? AND phone_number = ?";
+        $stmt = $conn->prepare($sql_check_customer);
+        $stmt->bind_param('ss', $nama, $nomor_hp);
+        $stmt->execute();
+        $result_customer = $stmt->get_result();
+
+        if ($result_customer->num_rows > 0) {
+            $customer = $result_customer->fetch_assoc();
+            $customer_id = $customer['id'];
+        } else {
+            // Jika belum ada, tambahkan customer baru
+            $sql_customer = "INSERT INTO customers (name, phone_number, address) 
+                            VALUES (?, ?, ?)";
+            $stmt = $conn->prepare($sql_customer);
+            $stmt->bind_param('sss', $nama, $nomor_hp, $alamat);
+            $stmt->execute();
+
+            $customer_id = $conn->insert_id;
+        }
 
         // Validasi metode pengiriman
         $sql_check_shipping = "SELECT price FROM shipping_methods WHERE id = ?";
@@ -58,10 +88,10 @@
 
         // Data JSON untuk penerima
         $delivery_data = json_encode([
-            'nama' => $nama,
-            'nomor_hp' => $nomor_hp,
-            'email' => $email,
-            'alamat' => $alamat
+            'nama' => htmlspecialchars($nama),
+            'nomor_hp' => htmlspecialchars($nomor_hp),
+            'email' => htmlspecialchars($email),
+            'alamat' => htmlspecialchars($alamat),
         ]);
 
         // Nomor pesanan unik
@@ -69,25 +99,24 @@
 
         // Simpan pesanan ke database
         $sql_order = "INSERT INTO orders (
-            customer_id, order_number, total_price, total_items,
+            customer_id, order_number, total_price, 
             payment_method_id, shipping_method_id, delivery_data
-        ) VALUES (?, ?, ?, ?, ?, ?, ?)";
-        $customer_id = 1; // Contoh ID customer
-        $total_items = 1; // Asumsi satu produk per pesanan
+        ) VALUES (?, ?, ?, ?, ?, ?)";
+        
         $stmt = $conn->prepare($sql_order);
         $stmt->bind_param(
-            'isdiiis',
+            'isdiss',
             $customer_id,
-            $order_number,
-            $total_price,
-            $total_items,
-            $payment_method,
-            $shipping_method,
-            $delivery_data
+            $order_number,      
+            $total_price,        
+            $payment_method,     
+            $shipping_method,    
+            $delivery_data       
         );
+        
 
         if ($stmt->execute()) {
-            echo "Pesanan berhasil dibuat! Nomor Pesanan Anda: " . $order_number;
+            header("Location: notif-chekout.php?order_number=$order_number");
         } else {
             echo "Terjadi kesalahan: " . $stmt->error;
         }

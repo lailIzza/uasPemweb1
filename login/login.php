@@ -21,9 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Mendapatkan data pengguna
         $user = $result->fetch_assoc();
         
-        // Verifikasi password menggunakan password_hash dan password_verify
+
         if (password_verify($input_password, $user['password'])) {
-            // Menyimpan data pengguna dalam session
             $_SESSION['username'] = $user['username'];
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['role'] = $user['role']; // Menyimpan role ke session

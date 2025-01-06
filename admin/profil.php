@@ -27,9 +27,9 @@
             <ul>
                 <li><a href="dashboard.php"><i class="bx bx-home"></i>Dashboard</a></li>
                 <li><a href="#profil"><i class="bx bx-user"></i>Profil Saya</a></li>
-                <li><a href="data_user.php"><i class="bx bx-group"></i>Data User</a></li>
                 <li><a href="#dataProduk"><i class="bx bx-box"></i>Data Produk</a></li>
                 <li><a href="tambah_produk.php"><i class="bx bx-plus-circle"></i>Tambah Produk</a></li>
+                <li><a href="../login/logout.php"><i class="bx bx-minus-circle"></i>Keluar</a></li>
             </ul>
     </div>
 
@@ -38,7 +38,6 @@
         <!-- Dashboard -->
         <h2>Dashboard</h2>
         <div class="welcome-card">
-            <img src="gambar/welcomeMan.jpg" alt="">
             <div>
                 <h3>Selamat datang, Laila</h3>
                 <p>Kelola informasi akun admin Anda untuk memastikan pengelolaan sistem tetap aman dan efisien.</p>
@@ -70,17 +69,35 @@
                     <input type="email" id="input-email" name="email" value="laila.yyy@gmail.com" class="profile-input" style="display: none;">
                 </div>
             </div>
-            <div class="profile-item">
-                <div>
-                    <strong>No Hp</strong>
-                    <p id="view-hp">081234567899001</p>
-                    <input type="text" id="input-hp" name="hp" value="081234567899001" class="profile-input" style="display: none;">
-                </div>
-            </div>
             <button class="edit-btn" id="edit-button" onclick="toggleEditMode()">Edit Profil</button>
             <button class="save-btn" id="save-button" style="display: none;" onclick="saveChanges()">Simpan</button>
         </div>
 
+        <!-- data transaksi -->
+        <div class="judul-content">
+            <h3 id="dataTransaksi">Data Transaksi</h3>
+            <p>Lihat dan kelola transaksi pengguna</p>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>No Pesananan</th>
+                    <th>Tanggal Transaksi</th>
+                    <th>Produk</th>
+                    <th>Status Pesanan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <th>ODR4271</th>
+                    <th>2022-01-01</th>
+                    <th>Samsung A20</th>
+                    <th>Belum Dikirim</th>
+                </tr>
+            </tbody>
+        </table>
 
         <!-- data produk -->
         <div class="judul-content">
