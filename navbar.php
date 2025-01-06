@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+// Cek apakah user sudah login
+$isLoggedIn = isset($_SESSION['username']);
+$username = $isLoggedIn ? $_SESSION['username'] : null;
+$profile_picture = isset($_SESSION['profile_picture']) ? $_SESSION['profile_picture'] : 'default.png'; // Gambar default
+$role = isset($_SESSION['role']) ? $_SESSION['role'] : 'user'; // Default ke 'user' jika role tidak di-set
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,6 +92,35 @@
             font-size: 20px;
             cursor: pointer;
         }
+        .main-navbar .profile-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #f7f7f7;
+        }
+        .main-navbar .profile-container img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .main-navbar .profile-container a span {
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .main-navbar .profile-container a span:hover{
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fcbf49;
+        }
+        .main-navbar .login-link {
+            color: #f7f7f7;
+            font-size: 20px;
+            text-decoration: none;
+        }
 
     </style>
 </head>
@@ -114,7 +154,17 @@
             </form>
         </div>
 
-        <a href="login/login.php"><i class='bx bx-user user-icon'></i></a>
+        <?php if ($isLoggedIn): ?>
+            <!-- Tampilkan username dan gambar profil -->
+            <div class="profile-container">
+                <img src="../gambar/<?php echo htmlspecialchars($profile_picture); ?>" alt="Profile Picture" style="text-decoration: none;">
+                <a href="<?php echo $role === 'admin' ? '../admin/profil.php' : '../user/profilU.php'; ?>" style="text-decoration: none;"><span><?php echo htmlspecialchars($username); ?></span></a>
+                <a href="../login/logout.php" class="login-link"><i class='bx bx-log-out'></i></a>
+            </div>
+        <?php else: ?>
+            <!-- Jika belum login -->
+            <a href="../login/login.php" class="login-link"><i class='bx bx-user'></i></a>
+        <?php endif; ?>
     </nav>
 </body>
 </html>
