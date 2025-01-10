@@ -9,7 +9,7 @@ if (session_status() === PHP_SESSION_NONE) {
 // Cek apakah user sudah login
 $isLoggedIn = isset($_SESSION['username']);
 $username = $isLoggedIn ? $_SESSION['username'] : null;
-$profile_picture = isset($_SESSION['profile_picture']) ? $_SESSION['profile_picture'] : 'default.png'; // Gambar default
+$profile_picture = isset($_SESSION['profile_picture']) ? $_SESSION['profile_picture']:
 $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'user'; // Default ke 'user' jika role tidak di-set
 
 ?>
@@ -162,7 +162,7 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'user'; // Default ke 'us
         <?php if ($isLoggedIn): ?>
             <!-- Tampilkan username dan gambar profil -->
             <div class="profile-container">
-                <img src="../gambar/<?php echo htmlspecialchars($profile_picture); ?>" alt="Profile Picture" style="text-decoration: none;">
+                <img src="../gambar/<?php echo htmlspecialchars($userData['profile_picture']); ?>" alt="Foto Profil">
                 <a href="<?php echo $role === 'admin' ? '../admin/profil.php' : '../user/profilU.php'; ?>" style="text-decoration: none;"><span><?php echo htmlspecialchars($username); ?></span></a>
                 <a href="../login/logout.php" class="login-link"><i class='bx bx-log-out'></i></a>
             </div>
