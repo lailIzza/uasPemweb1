@@ -1,6 +1,37 @@
 <?php
     require "../koneksi.php";
 
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+    
+    // Ambil data user berdasarkan ID
+    $user_id = $_SESSION['user_id'];
+    $sql = "SELECT username, email, profile_picture, role FROM users WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $userData = $result->fetch_assoc();
+
+    // Query data transaksi
+    $sqlOrders = "
+        SELECT 
+            id AS order_id,
+            order_number,
+            payment_method_id,
+            product_name, -- Nama produk langsung dari tabel orders
+            (SELECT status_name FROM order_statuses WHERE id = orders.order_status_id) AS order_status
+        FROM orders
+        ORDER BY order_date DESC
+    ";
+
+    $resultOrders = $conn->query($sqlOrders);
+
+    if (!$resultOrders) {
+        die("Error pada query data transaksi: " . $conn->error);
+    }
+
     // Query untuk mengambil data produk
     $sql = "SELECT id, nama, stock, deskripsi FROM produk";
     $result = $conn->query($sql);
@@ -21,11 +52,11 @@
     <!-- sidebar -->
     <div class="sidebar">
         <div class="profile-section">
-            <img alt="User profile picture" src="https://via.placeholder.com/50" />
-            <div class="username">Laila</div>
+            <img src="../gambar/<?php echo htmlspecialchars($userData['profile_picture']); ?>" alt="Foto Profil">
+            <div class="username"><?php echo htmlspecialchars($userData['username']); ?></div>
         </div>
             <ul>
-                <li><a href="dashboard.php"><i class="bx bx-home"></i>Dashboard</a></li>
+                <li><a href="#dashboard"><i class="bx bx-home"></i>Dashboard</a></li>
                 <li><a href="#profil"><i class="bx bx-user"></i>Profil Saya</a></li>
                 <li><a href="#dataProduk"><i class="bx bx-box"></i>Data Produk</a></li>
                 <li><a href="tambah_produk.php"><i class="bx bx-plus-circle"></i>Tambah Produk</a></li>
@@ -37,9 +68,9 @@
     <div class="main-content">
         <!-- Dashboard -->
         <h2>Dashboard</h2>
-        <div class="welcome-card">
+        <div class="welcome-card" id="dashboard">
             <div>
-                <h3>Selamat datang, Laila</h3>
+                <h3>Selamat datang, <?php echo htmlspecialchars($userData['username']); ?></h3>
                 <p>Kelola informasi akun admin Anda untuk memastikan pengelolaan sistem tetap aman dan efisien.</p>
                 <p>Perbarui data Anda agar tetap relevan dan sesuai kebutuhan operasional.</p>
             </div>
@@ -53,24 +84,20 @@
         <div class="profile-card">
             <div class="profile-item">
                 <div><strong>Foto Profil</strong></div>
-                <img src="https://via.placeholder.com/100" alt="Foto Profil" class="profile-photo">
+                <img src="../gambar/<?php echo htmlspecialchars($userData['profile_picture']); ?>" alt="Foto Profil" class="profile-photo">
             </div>
             <div class="profile-item">
                 <div>
                     <strong>Nama</strong>
-                    <p id="view-nama">Laila</p>
-                    <input type="text" id="input-nama" name="nama" value="Laila" class="profile-input" style="display: none;">
+                    <p id="view-nama"><?php echo htmlspecialchars($userData['username']); ?></p>
                 </div>
             </div>
             <div class="profile-item">
                 <div>
                     <strong>E-Mail</strong>
-                    <p id="view-email">laila.yyy@gmail.com</p>
-                    <input type="email" id="input-email" name="email" value="laila.yyy@gmail.com" class="profile-input" style="display: none;">
+                    <p id="view-email"><?php echo htmlspecialchars($userData['email']); ?></p>
                 </div>
             </div>
-            <button class="edit-btn" id="edit-button" onclick="toggleEditMode()">Edit Profil</button>
-            <button class="save-btn" id="save-button" style="display: none;" onclick="saveChanges()">Simpan</button>
         </div>
 
         <!-- data transaksi -->
@@ -83,19 +110,30 @@
                 <tr>
                     <th>No</th>
                     <th>No Pesananan</th>
-                    <th>Tanggal Transaksi</th>
+                    <th>Metode Pembayaran</th>
                     <th>Produk</th>
                     <th>Status Pesanan</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th>1</th>
-                    <th>ODR4271</th>
-                    <th>2022-01-01</th>
-                    <th>Samsung A20</th>
-                    <th>Belum Dikirim</th>
-                </tr>
+                <?php
+                     if ($resultOrders->num_rows > 0) {
+                        $no = 1;
+                        while ($order = $resultOrders->fetch_assoc()) {
+                            echo "<tr>";
+                            echo "<td>" . $no++ . "</td>";
+                            echo "<td>" . htmlspecialchars($order['order_number']) . "</td>";
+                            echo "<td>" . htmlspecialchars($order['payment_method_id']) . "</td>";
+                            echo "<td>" . htmlspecialchars($order['product_name']) . "</td>";
+                            echo "<td>" . htmlspecialchars($order['order_status']) . "</td>";
+                            echo '<td><a href="update_status.php?id=' . $order['order_id'] . '">Ubah Status</a></td>';
+                            echo "</tr>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='5'>Tidak ada data transaksi</td></tr>";
+                    }
+                ?>
             </tbody>
         </table>
 
@@ -151,47 +189,6 @@
                 window.location.href = "hapus_produk.php?id=" + id;
             }
         }
-
-        // script edit profil
-        function toggleEditMode() {
-            // Elemen tampilan
-            const viewNama = document.getElementById('view-nama');
-            const viewEmail = document.getElementById('view-email');
-            const viewHp = document.getElementById('view-hp');
-            
-            // Elemen input
-            const inputNama = document.getElementById('input-nama');
-            const inputEmail = document.getElementById('input-email');
-            const inputHp = document.getElementById('input-hp');
-            
-            // Tombol
-            const editButton = document.getElementById('edit-button');
-            const saveButton = document.getElementById('save-button');
-
-            // Ubah ke mode edit
-            viewNama.style.display = 'none';
-            viewEmail.style.display = 'none';
-            viewHp.style.display = 'none';
-
-            inputNama.style.display = 'block';
-            inputEmail.style.display = 'block';
-            inputHp.style.display = 'block';
-
-            editButton.style.display = 'none';
-            saveButton.style.display = 'block';
-        }
-
-        function saveChanges() {
-            // Lakukan validasi atau aksi lainnya di sini
-            document.getElementById('save-button').innerText = 'Menyimpan...';
-
-            // Simulasikan pengiriman form dengan fetch atau ajax
-            setTimeout(() => {
-                alert('Perubahan berhasil disimpan!');
-                location.reload();
-            }, 1500);
-        }
-
 
         </script>
 </body>
