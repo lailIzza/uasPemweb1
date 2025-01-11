@@ -61,13 +61,11 @@ CREATE TABLE `orders` (
   `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `customer_id` bigint(20) UNSIGNED DEFAULT NULL,
   `order_number` varchar(16) NOT NULL UNIQUE,
-  `order_status` enum('1','2','3','4','5') DEFAULT '1',
   `order_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `total_price` decimal(10,2) DEFAULT NULL,
   `payment_method` int(11) DEFAULT 1,
   `delivery_data` text DEFAULT NULL,
-  `delivered_date` datetime DEFAULT NULL,
-  `finish_date` datetime DEFAULT NULL,
+  `order_status_id` TINYINT UNSIGNED DEFAULT 1,
   PRIMARY KEY (`id`),
   FOREIGN KEY (`customer_id`) REFERENCES `customers`(`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
