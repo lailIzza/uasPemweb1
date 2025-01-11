@@ -100,18 +100,19 @@
         // Simpan pesanan ke database
         $sql_order = "INSERT INTO orders (
             customer_id, order_number, total_price, 
-            payment_method_id, shipping_method_id, delivery_data
-        ) VALUES (?, ?, ?, ?, ?, ?)";
+            payment_method_id, shipping_method_id, delivery_data, product_name
+        ) VALUES (?, ?, ?, ?, ?, ?, ?)";
         
         $stmt = $conn->prepare($sql_order);
         $stmt->bind_param(
-            'isdiss',
+            'isdisss',
             $customer_id,
             $order_number,      
             $total_price,        
             $payment_method,     
             $shipping_method,    
-            $delivery_data       
+            $delivery_data,
+            $produk['nama']       
         );
         
 
@@ -188,7 +189,7 @@
                     <p>Ongkir: Rp. <span id="ongkir">0</span></p>
                     <p>Metode pembayaran: <span id="payment_method_display">-</span></p>
                     <hr>
-                    <p class="total">Total: Rp. <?= number_format($produk['harga'] + 35000, 0, ',', '.') ?></p>
+                    <p class="total">Total Pesanan: Rp. <span id="total_price"><?= number_format($produk['harga'], 0, ',', '.') ?></span></p>
                 </div>
                 <div class="button-group">
                     <button class="button primary"><i class='bx bx-check-circle'></i> Pesan Sekarang</button>
@@ -229,12 +230,12 @@
         const ongkirElem = document.getElementById('ongkir');
         const totalElem = document.getElementById('total_price');
         const paymentDisplay = document.getElementById('payment_method_display');
-        const hargaProduk = <?= json_encode($produk['harga']) ?>;
+        const hargaProduk = Number(<?= json_encode($produk['harga']) ?>); 
 
         // Update ongkir dan total harga berdasarkan metode pengiriman
         shippingSelect.addEventListener('change', function () {
             const selectedOption = this.options[this.selectedIndex];
-            const ongkir = parseInt(selectedOption.dataset.cost || 0);
+            const ongkir = parseInt(selectedOption.dataset.cost || 0, 10);
             ongkirElem.textContent = ongkir.toLocaleString('id-ID');
             totalElem.textContent = (hargaProduk + ongkir).toLocaleString('id-ID');
         });
